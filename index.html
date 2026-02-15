@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTS NEWS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-sports.css">
+   <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+                
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/20210512190118_logo_21.png">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome for Star Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS" class="preloader-logo">
+        </div>
+    </div>
+    <div class="main-content">
+
+<!-- Header -->
+ 
+<header class="site-header">
+    <div class="header-top container">
+        <div class="logo-area">
+            <a href="#" class="logo-link">
+                <img src="assets/images/20210512190118_logo_21.png" class="logo">
+
+                <!-- <span>PTS NEWS</span> -->
+            </a>
+            <div class="search-box">
+                <form>
+                    <input type="text" data-i18n-placeholder="Search ..." placeholder="Search ...">
+                    <button type="submit"><i class="ri-search-line"></i></button>
+                </form>
+            </div>
+
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+
+             <nav class="main-nav">
+        <div class="nav-inner container">
+
+            <!-- Mega Menu - Each category has its own unique mega menu -->
+            <ul class="menu">
+                <li><a href="#" data-i18n="Home">Home</a></li>
+
+                <!-- Politics Mega Menu -->
+                <li class="has-mega">
+                    <a href="#" data-i18n="Politics">Politics</a>
+                    <div class="mega-menu">
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            <h3 data-i18n="Election Updates">Election Updates</h3>
+                            <p data-i18n="Latest election news and insights.">Latest election news and insights.</p>
+                        </div>
+
+                        <div class="mega-card">
+                            <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            <h3 data-i18n="Government">Government</h3>
+                            <p data-i18n="Policy decisions and governance.">Policy decisions and governance.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            <h3 data-i18n="World Politics">World Politics</h3>
+                            <p data-i18n="International political events.">International political events.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            <h3 data-i18n="Analysis">Analysis</h3>
+                            <p data-i18n="Expert opinions and deep dives.">Expert opinions and deep dives.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Business Mega Menu -->
+                <li class="has-mega">
+                    <a href="#" data-i18n="Business">Business</a>
+                    <div class="mega-menu">
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                            <h3 data-i18n="Stock Market">Stock Market</h3>
+                            <p data-i18n="Daily market trends and analysis.">Daily market trends and analysis.</p>
+                        </div>
+
+                        <div class="mega-card">
+                            <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                            <h3 data-i18n="Startups">Startups</h3>
+                            <p data-i18n="New ventures and funding news.">New ventures and funding news.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                            <h3 data-i18n="Economy">Economy</h3>
+                            <p data-i18n="Economic indicators and policies.">Economic indicators and policies.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                            <h3 data-i18n="Companies">Companies</h3>
+                            <p data-i18n="Corporate news and mergers.">Corporate news and mergers.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Sports Mega Menu -->
+                <li class="has-mega">
+                    <a href="#" data-i18n="Sports">Sports</a>
+                    <div class="mega-menu">
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                            <h3 data-i18n="Cricket">Cricket</h3>
+                            <p data-i18n="Matches, scores and player updates.">Matches, scores and player updates.</p>
+                        </div>
+
+                        <div class="mega-card">
+                            <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                            <h3 data-i18n="Football">Football</h3>
+                            <p data-i18n="Leagues, transfers and highlights.">Leagues, transfers and highlights.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                            <h3 data-i18n="Tennis">Tennis</h3>
+                            <p data-i18n="Grand slams and tournament news.">Grand slams and tournament news.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                            <h3 data-i18n="Olympics">Olympics</h3>
+                            <p data-i18n="Games updates and athlete stories.">Games updates and athlete stories.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Science Mega Menu -->
+                <li class="has-mega">
+                    <a href="#" data-i18n="Science">Science</a>
+                    <div class="mega-menu">
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                            <h3 data-i18n="Space">Space</h3>
+                            <p data-i18n="NASA, ISRO and space exploration.">NASA, ISRO and space exploration.</p>
+                        </div>
+
+                        <div class="mega-card">
+                            <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                            <h3 data-i18n="Research">Research</h3>
+                            <p data-i18n="Scientific discoveries and studies.">Scientific discoveries and studies.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                            <h3 data-i18n="Technology">Technology</h3>
+                            <p data-i18n="Tech innovations and breakthroughs.">Tech innovations and breakthroughs.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                            <h3 data-i18n="Environment">Environment</h3>
+                            <p data-i18n="Climate change and ecology news.">Climate change and ecology news.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Tech Mega Menu -->
+                <li class="has-mega">
+                    <a href="#" data-i18n="Tech">Tech</a>
+                    <div class="mega-menu">
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                            <h3 data-i18n="Artificial Intelligence">Artificial Intelligence</h3>
+                            <p data-i18n="AI developments and applications.">AI developments and applications.</p>
+                        </div>
+
+                        <div class="mega-card">
+                            <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                            <h3 data-i18n="Gadgets">Gadgets</h3>
+                            <p data-i18n="Latest devices and launches.">Latest devices and launches.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                            <h3 data-i18n="Apps">Apps</h3>
+                            <p data-i18n="Mobile app news and reviews.">Mobile app news and reviews.</p>
+                        </div>
+
+                        <div class="mega-card">
+                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                            <h3 data-i18n="Software">Software</h3>
+                            <p data-i18n="Programming and software updates.">Programming and software updates.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <div class="header-actions">
+                
+                <a href="#" class="subscribe-btn" data-i18n="Subscribe" data-auto-translate="true">Subscribe</a>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
+                    <i class="ri-moon-fill"></i>
+                  
+                </button>
+                <button id="side-nav-button" class="side-nav-button">
+                    
+                    <i class="ri-bar-chart-horizontal-line"></i>
+                </button>
+
+
+                     
+            </div>
+        </div>
+    </nav>
+
+
+        </div>
+
+        <!-- <div class="header-ads">
+             Dummy Advertisement Banner 
+            <div class="ad-banner dummy-ad">
+                <div class="ad-content">
+                    
+                    <div class="ad-placeholder">
+                        <p class="ad-text">Your Advertisement Here</p>
+                        <p class="ad-subtext">Contact us to advertise on PTS NEWS</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+
+   
+</header>
+<!--Header ends here-->
+       <!-- Breaking News Bar -->
+        
+<div class="breaking-news-bar">
+    <div class="container">
+         
+        
+        <div class="breaking-label">
+             <i class="ri-fire-fill"></i> <span data-i18n="Breaking News" data-auto-translate="true">Breaking News</span>
+        </div>
+        <div class="breaking-ticker-wrapper">
+            <div class="breaking-ticker">
+                <span data-auto-translate="true">Global climate summit reaches historic agreement on carbon emissions reduction</span>
+                <span>•</span>
+                <span data-auto-translate="true">Tech giant announces revolutionary AI-powered healthcare solution</span>
+                <span>•</span>
+                <span data-auto-translate="true">International space station celebrates 25 years in orbit</span>
+                <span>•</span>
+                <span data-auto-translate="true">Major economic reform package unveiled by leading nations</span>
+            </div>
+        </div>
+
+         <!-- Date widget -->
+        <div class="date-widget">
+                <span id="date-display"></span>
+            </div>
+        <!-- Language Switcher inside breaking bar -->
+        <div class="language-switcher-inline">
+            <select id="language-selector">
+                <option value="en">ENG</option>
+                <option value="tam">தமிழ்</option>
+                <option value="hin">हिंदी</option>
+            </select>
+        </div>
+<!-- User Icon for Admin -->
+        <a href="admin-login.html" class="user-icon-btn" title="Admin Login">
+            <i class="ri-user-line"></i>
+        </a>
+    </div>
+</div>
+
+
+</div>
+
+<div id="side-nav-overlay" class="side-nav-overlay"></div>
+<div id="side-nav" class="side-nav">
+    <button id="side-nav-close" class="side-nav-close">
+        <i class="ri-close-line"></i>
+    </button>
+    <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS" class="side-nav-logo">
+    <div class="side-nav-description" data-i18n-html="Stay informed with the latest news and updates from us." data-auto-translate="true">
+        Stay informed with the latest news and updates from us.
+    </div>
+     <ul class="sub-menu" id="sub-menu">
+                <li class="has-child">
+                    <a href="#" data-i18n="Home" data-auto-translate="true">Home</a>
+                   
+                </li>
+                <li><a href="#" data-i18n="Politics" data-auto-translate="true">Politics</a></li>
+                <li><a href="#" data-i18n="Business" data-auto-translate="true">Business</a></li>
+                <li><a href="#" data-i18n="Sports" data-auto-translate="true">Sports</a></li>
+                <li><a href="#" data-i18n="Science" data-auto-translate="true">Science</a></li>
+                <li><a href="#" data-i18n="Tech" data-auto-translate="true">Tech</a></li>
+                
+            </ul>
+    <div class="social-links">
+        <a href="#" class="social-link facebook"><i class="ri-facebook-fill"></i> <span data-i18n="Facebook" data-auto-translate="true">Facebook</span></a>
+        <a href="#" class="social-link twitter"><i class="ri-twitter-fill"></i> <span data-i18n="Twitter" data-auto-translate="true">Twitter</span></a>
+        <a href="#" class="social-link instagram"><i class="ri-instagram-fill"></i> <span data-i18n="Instagram" data-auto-translate="true">Instagram</span></a>
+        <a href="#" class="social-link youtube"><i class="ri-youtube-fill"></i> <span data-i18n="YouTube" data-auto-translate="true">YouTube</span></a>
+        
+    </div>
+</div>
+
+    <!-- Spot Slider Section -->
+    <section class="spot-slider-section">
+        <div class="container">
+           
+            <div class="spot-slider">
+                <!-- Main Slider with Top Thumbnails -->
+                <div class="main-slider-wrapper">
+                    <!-- Top Thumbnail Navigation (Horizontal) -->
+                    <div class="top-thumbs-container">
+                    <div class="top-thumbs-header">
+                            <span class="top-thumbs-title" data-i18n="Top Stories">Top Stories</span>
+                            <div class="top-thumbs-progress-bar">
+                                <div class="top-thumbs-progress-fill"></div>
+                            </div>
+                        </div>
+                        <div class="top-thumbs-list" id="top-thumbs-list">
+                            <div class="top-thumb-item active" data-index="0">
+                                <div class="top-thumb-content">
+                                    <span class="top-thumb-number">01</span>
+                                    <h6 class="top-thumb-title" data-auto-translate="true">Historic Climate Agreement</h6>
+                                    <span class="top-thumb-date">Dec 17</span>
+                                </div>
+                            </div>
+                            <div class="top-thumb-item" data-index="1">
+                                <div class="top-thumb-content">
+                                    <span class="top-thumb-number">02</span>
+                                    <h6 class="top-thumb-title" data-auto-translate="true">AI Healthcare Solution</h6>
+                                    <span class="top-thumb-date">Dec 16</span>
+                                </div>
+                            </div>
+                            <div class="top-thumb-item" data-index="2">
+                                <div class="top-thumb-content">
+                                    <span class="top-thumb-number">03</span>
+                                    <h6 class="top-thumb-title" data-auto-translate="true">Global Markets Rally</h6>
+                                    <span class="top-thumb-date">Dec 15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Slider -->
+                    <div class="swiper main-slider" id="top-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <article class="slide-content">
+                                    <div class="slide-image" data-swiper-parallax-scale="1">
+                                        <img src="assets/images/20260103082456_big_730x400_7.webp" alt="Breaking News Story">
+                                    </div>
+                                    <div class="slide-overlay"></div>
+                                    <div class="slide-text" data-swiper-parallax="5%">
+                                        <div class="slide-meta-top">
+                                            <span class="category-tag">Politics</span>
+                                            <span class="date-after-category">December 17, 2025</span>
+                                        </div>
+                                        <h2 class="slide-title">
+                                            <a href="#" data-auto-translate="true">Historic Climate Agreement Reached at Global Summit</a>
+                                        </h2>
+                                        <div class="slide-meta">
+                                            <div class="author-info">
+                                                <div class="author-avatar">
+                                                    <img src="assets/images/default-123x83.png" alt="Author">
+                                                </div>
+                                                <div class="author-details">
+                                                    <span class="by">By</span>
+                                                    <a href="#">John Smith</a>
+                                                </div>
+                                            </div>
+                                            <div class="post-date">
+                                                <i class="ri-calendar-line"></i>
+                                                <span>December 17, 2025</span>
+                                                <span class="time">- 10:00 am</span>
+                                            </div>
+                                        </div>
+                                        <p class="excerpt" data-auto-translate="true">World leaders gather to sign unprecedented climate agreement targeting carbon emissions reduction over the next decade.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <article class="slide-content">
+                                    <div class="slide-image" data-swiper-parallax-scale="1">
+                                        <img src="assets/images/20260103082039_big_730x400_16.webp" alt="Tech News">
+                                    </div>
+                                    <div class="slide-overlay"></div>
+                                    <div class="slide-text" data-swiper-parallax="5%">
+                                        <div class="slide-meta-top">
+                                            <span class="category-tag">Technology</span>
+                                            <span class="date-after-category">December 16, 2025</span>
+                                        </div>
+                                        <h2 class="slide-title">
+                                            <a href="#" data-auto-translate="true">Revolutionary AI Healthcare Solution Unveiled</a>
+                                        </h2>
+                                        <div class="slide-meta">
+                                            <div class="author-info">
+                                                <div class="author-avatar">
+                                                    <img src="assets/images/default-123x83.png" alt="Author">
+                                                </div>
+                                                <div class="author-details">
+                                                    <span class="by">By</span>
+                                                    <a href="#">Sarah Johnson</a>
+                                                </div>
+                                            </div>
+                                            <div class="post-date">
+                                                <i class="ri-calendar-line"></i>
+                                                <span>December 16, 2025</span>
+                                                <span class="time">- 2:30 pm</span>
+                                            </div>
+                                        </div>
+                                        <p class="excerpt" data-auto-translate="true">Tech giant announces breakthrough AI system that can diagnose diseases with unprecedented accuracy.</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <article class="slide-content">
+                                    <div class="slide-image" data-swiper-parallax-scale="1">
+                                        <img src="assets/images/20260102081509_big_730x400_37.webp" alt="Business News">
+                                    </div>
+                                    <div class="slide-overlay"></div>
+                                    <div class="slide-text" data-swiper-parallax="5%">
+                                        <div class="slide-meta-top">
+                                            <span class="category-tag">Business</span>
+                                            <span class="date-after-category">December 15, 2025</span>
+                                        </div>
+                                        <h2 class="slide-title">
+                                            <a href="#" data-auto-translate="true">Global Markets Rally on Economic Recovery News</a>
+                                        </h2>
+                                        <div class="slide-meta">
+                                            <div class="author-info">
+                                                <div class="author-avatar">
+                                                    <img src="assets/images/default-123x83.png" alt="Author">
+                                                </div>
+                                                <div class="author-details">
+                                                    <span class="by">By</span>
+                                                    <a href="#">Mike Brown</a>
+                                                </div>
+                                            </div>
+                                            <div class="post-date">
+                                                <i class="ri-calendar-line"></i>
+                                                <span>December 15, 2025</span>
+                                                <span class="time">- 9:15 am</span>
+                                            </div>
+                                        </div>
+                                        <p class="excerpt" data-auto-translate="true">Stock markets worldwide surge as major economies report stronger than expected economic recovery figures.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="breaking-new">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        <span class="title-decoration"></span>
+                        <i class="ri-fire-fill"></i> <span data-i18n="Popular News" data-auto-translate="true">Popular News</span>
+                    </h3>
+                </div>
+                <div class="hero__title" id="animatedHeading">
+                    <div class="slick-dupe"><span class="hero__title-misc | animate">
+                        <article class="post-wrapper">
+                            <div class="date-in-out-image date-outside-image">
+                                <span class="day">11</span>
+                                <span class="month">Sep</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <h6 class="post-title">
+                                    <a href="#" class="title-animation-underline-break" data-auto-translate="true" title="One Day Noticed, Politicians Wary Resignation Timetable">One Day Noticed, Politicians Wary Resignation Timetable</a>
+                                </h6>
+                                <div class="meta-wrapper">
+                                    <div class="post-author-wrapper">
+                                        <div class="author-wrapper">
+                                            <div class="author-meta">
+                                                <span class="by">By</span>
+                                                <a href="#">Denis Schmidt</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </span></div>
+                    <div class="slick-dupe"><span class="hero__title-misc | animate">
+                        <article class="post-wrapper">
+                            <div class="date-in-out-image date-outside-image">
+                                <span class="day">02</span>
+                                <span class="month">Sep</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <h6 class="post-title">
+                                    <a href="#" class="title-animation-underline-break" data-auto-translate="true" title="Our Nation: Join the Movement for Change">Our Nation: Join the Movement for Change</a>
+                                </h6>
+                                <div class="meta-wrapper">
+                                    <div class="post-author-wrapper">
+                                        <div class="author-wrapper">
+                                            <div class="author-meta">
+                                                <span class="by">By</span>
+                                                <a href="#">Denis Schmidt</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </span></div>
+                    <div class="slick-dupe"><span class="hero__title-misc | animate">
+                        <article class="post-wrapper">
+                            <div class="date-in-out-image date-outside-image">
+                                <span class="day">30</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <h6 class="post-title">
+                                    <a href="#" class="title-animation-underline-break" data-auto-translate="true" title="Everything You Wanted to Know About Politics">Everything You Wanted to Know About Politics</a>
+                                </h6>
+                                <div class="meta-wrapper">
+                                    <div class="post-author-wrapper">
+                                        <div class="author-wrapper">
+                                            <div class="author-meta">
+                                                <span class="by">By</span>
+                                                <a href="#">Denis Schmidt</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </span></div>
+                    <div class="slick-dupe"><span class="hero__title-misc | animate">
+                        <article class="post-wrapper">
+                            <div class="date-in-out-image date-outside-image">
+                                <span class="day">29</span>
+                                <span class="month">Jun</span>
+                            </div>
+                            <div class="content-wrapper">
+                                <h6 class="post-title">
+                                    <a href="#" class="title-animation-underline-break" data-auto-translate="true" title="A Glimpse into the Uncharted Realms of Intelligence">A Glimpse into the Uncharted Realms of Intelligence</a>
+                                </h6>
+                                <div class="meta-wrapper">
+                                    <div class="post-author-wrapper">
+                                        <div class="author-wrapper">
+                                            <div class="author-meta">
+                                                <span class="by">By</span>
+                                                <a href="#">Denis Schmidt</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Category Section Slider-->
+    <!-- <section class="category-slider-section">
+        <div class="container">
+            <div class="category-slider-header">
+                <h3 class="category-slider-title">
+                    <i class="ri-layout-grid-fill"></i>
+                    <span>Latest News</span>
+                </h3>
+                <div class="category-slider-nav">
+                    <button class="category-slider-btn category-slider-prev">
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+                    <button class="category-slider-btn category-slider-next">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper category-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/tamilnadu">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/e-card-family-head-photo-registration">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/madurai-aug-25-thaneeth-muthal-madmadam">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/madapuram-jewellery-murder-case">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/politics">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/rajini-style-vijay-sketch">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/sports">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/cricket-world-cup">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/business">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/stock-market-update">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/technology">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/ai-technology">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="category-card">
+                            <div class="category-image-wrapper">
+                                <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                <div class="category-badge">
+                                    <a href="https://ptsnews.in/category/education">Our Nation</a>
+                                </div>
+                            </div>
+                            <div class="category-content">
+                                <a href="https://ptsnews.in/story/school-exams">
+                                    <p>A Glimpse into the Uncharted Realms of Intelligence</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-slider-pagination"></div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!--TRENDING NOW SECTION - Horizontal Card Slider -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="trending-header">
+                <h2 class="trending-title">
+                    <span class="trending-icon"><i class="ri-flashlight-fill"></i></span>
+                    <span data-i18n="Trending Now" data-auto-translate="true">Trending Now</span>
+                </h2>
+                <div class="trending-nav">
+                    <button class="trending-nav-btn trending-prev" aria-label="Previous slide">
+                        <i class="ri-arrow-left-line"></i>
+                    </button>
+                    <button class="trending-nav-btn trending-next" aria-label="Next slide">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="trending-slider-wrapper">
+                <div class="swiper trending-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20260103082456_medium_358x215_40.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Business</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Stock Markets Hit Record High as Economic Recovery Accelerates</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 17, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 12.5K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20260103082039_medium_358x215_42.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Technology</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Revolutionary AI Breakthrough Promises to Transform Healthcare Industry</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 16, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 10.2K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20260102081509_medium_358x215_28.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Sports</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Historic Victory: Underdog Team Clinches Championship Title</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 15, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 9.8K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20260102081233_medium_358x215_14.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Politics</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Global Leaders Announce Landmark Climate Agreement at Summit</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 14, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 8.5K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20260101075831_medium_358x215_16.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Science</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">SpaceX Successfully Launches Mission to Mars Colonization</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 13, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 7.9K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20251231081229_small_123x83_21.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Entertainment</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Award-Winning Film Breaks Box Office Records Worldwide</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 12, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 6.3K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20251227082048_small_123x83_6.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Health</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">New Study Reveals Revolutionary Treatment for Chronic Diseases</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 11, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 5.7K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide">
+                            <article class="trending-card">
+                                <div class="trending-image">
+                                    <img src="assets/images/20251227081558_small_123x83_22.webp" alt="Trending News">
+                                    <div class="trending-overlay">
+                                        <span class="trending-category">Finance</span>
+                                    </div>
+                                    <div class="trending-badge">
+                                        <i class="ri-fire-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="trending-content">
+                                    <h3 class="trending-card-title">
+                                        <a href="#" data-auto-translate="true">Cryptocurrency Market Surges as Major Institutions Enter</a>
+                                    </h3>
+                                    <div class="trending-meta">
+                                        <span class="trending-date"><i class="ri-calendar-line"></i> Dec 10, 2025</span>
+                                        <span class="trending-views"><i class="ri-eye-line"></i> 4.9K views</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="trending-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--New Sections-->
+    <section class="news-sections">
+        <div class="container">
+            <div class="news-row">
+                <!-- Africa Column -->
+                <div class="news-column">
+                    <div class="column-header">
+                        <h3 class="column-title">
+                            <span class="title-decoration"></span>
+                            <span data-i18n="Education">Education</span>
+                        </h3>
+                    </div>
+                    <div class="article-list">
+                        <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag" data-i18n="Africa">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+                        
+                        <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Tanzania unveils new non-invasive method to detect COVID-19</a>
+                            </h4>
+                        </article>
+                        
+                        <article class="news-article premium">
+                            <div class="article-meta">
+                                <span class="category-tag premium-badge">Premium</span>
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Nigeria to ban money rituals and smoking in Nollywood movies</a>
+                            </h4>
+                        </article>
+                        
+                        <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Eritrean Tesfatsion wins Tour du Rwanda for second time</a>
+                            </h4>
+                        </article>
+                        
+                        <article class="news-article premium">
+                            <div class="article-meta">
+                                <span class="category-tag premium-badge">Premium</span>
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Netflix to premiere African reality show 'Young, Famous & African'</a>
+                            </h4>
+                        </article>
+                        
+                        <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Africa records high number of gamers with some turning pro</a>
+                            </h4>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Europe Column -->
+                <div class="news-column">
+                    <div class="column-header">
+                        <h3 class="column-title">
+                            <span class="title-decoration"></span>
+                            <span data-i18n="Health">Health</span>
+                        </h3>
+                    </div>
+                    <div class="article-list">
+                        <article class="news-article featured">
+                            <div class="article-meta">
+                                <span class="category-tag" data-i18n="Europe">Europe</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Near the frontline in eastern Ukraine, snipers and scepticism abound</a>
+                            </h4>
+                            <img src="assets/images/20250621205021_medium_358x215_22.webp">
+                            <p class="article-excerpt" data-auto-translate="true">It is a daily ritual for millions of Australians, but if you have noticed the price of your morning flat white or soy latte increase, brace yourself — it is likely to get worse.</p>
+                        </article>
+                        
+                        <article class="news-article premium">
+                            <div class="article-meta">
+                                <span class="category-tag premium-badge" data-i18n="Premium">Premium</span>
+                                <span class="category-tag" data-i18n="Europe">Europe</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Eight Bulgarians among 11 missing after fire on ship near Corfu</a>
+                            </h4>
+                            <p class="article-excerpt" data-auto-translate="true">It is a daily ritual for millions of Australians, but if you have noticed the price of your morning flat white or soy latte increase, brace yourself — it is likely to get worse.</p>
+                        </article>
+                        
+                        <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Europe</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">More people in need of charity in Europe since COVID-19, NGO says</a>
+                            </h4>
+                            <p class="article-excerpt" data-auto-translate="true">It is a daily ritual for millions of Australians, but if you have noticed the price of your morning flat white or soy latte increase, brace yourself — it is likely to get worse.</p>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+
+                           <article class="news-article">
+                            <div class="article-meta">
+                                <span class="category-tag">Africa</span>
+                                <span class="article-date">March 4, 2022</span>
+                            </div>
+                            <h4 class="article-title">
+                                <a href="#" data-auto-translate="true">Scientists use ivory tusk DNA data to locate poaching networks</a>
+                            </h4>
+                        </article>
+                    </div>
+                </div>
+                
+              <!-- Air Quality Index Section -->
+               <div class="news-column animate-in">
+
+               
+    <section class="aqi-section">
+        <div class="container">
+            <div class="aqi-widget">
+                    <div class="aqi-header">
+                    <h3 class="aqi-title">
+                        <i class="ri-cloud-windy-line"></i>
+                        <span id="aqi-title-text" data-i18n="Air Quality Index">Air Quality Index</span>
+                        <span id="aqi-location" class="aqi-location"></span>
+                    </h3>
+                    <div class="aqi-header-actions">
+                        <button id="detect-location-btn" class="detect-location-btn" title="Detect your location">
+                            <i class="ri-map-pin-line"></i>
+                            <span data-i18n="Detect My Location">Detect My Location</span>
+                        </button>
+                        
+                    </div>
+                </div>
+                <!-- Location Status Messages -->
+                <div id="location-status" class="location-status"></div>
+                <!-- Location Search -->
+                <div id="location-search" class="location-search">
+                    <input type="text" id="city-search-input" placeholder="Enter city name...">
+                    <button id="search-city-btn" class="search-city-btn">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
+                <div class="aqi-content">
+                    <div class="aqi-main-display">
+                        <div class="aqi-value" id="aqi-value">--</div>
+                        <div class="aqi-status" id="aqi-status">Loading...</div>
+                    </div>
+                    <div class="aqi-details">
+                        <div class="aqi-parameter">
+                            <span class="parameter-label">PM2.5</span>
+                            <span class="parameter-value" id="pm25-value">--</span>
+                        </div>
+                        <div class="aqi-parameter">
+                            <span class="parameter-label">PM10</span>
+                            <span class="parameter-value" id="pm10-value">--</span>
+                        </div>
+                        <div class="aqi-parameter">
+                            <span class="parameter-label">NO₂</span>
+                            <span class="parameter-value" id="no2-value">--</span>
+                        </div>
+                        <div class="aqi-parameter">
+                            <span class="parameter-label">O₃</span>
+                            <span class="parameter-value" id="o3-value">--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aqi-scale">
+                    <div class="scale-item good">
+                        <span class="scale-label" data-i18n="Good">Good</span>
+                        <span class="scale-range">0-50</span>
+                    </div>
+                    <div class="scale-item moderate">
+                        <span class="scale-label" data-i18n="Moderate">Moderate</span>
+                        <span class="scale-range">51-100</span>
+                    </div>
+                    <div class="scale-item unhealthy-sensitive">
+                        <span class="scale-label" data-i18n="Unhealthy for Sensitive">Unhealthy for Sensitive</span>
+                        <span class="scale-range">101-150</span>
+                    </div>
+                    <div class="scale-item unhealthy">
+                        <span class="scale-label" data-i18n="Unhealthy">Unhealthy</span>
+                        <span class="scale-range">151-200</span>
+                    </div>
+                    <div class="scale-item very-unhealthy">
+                        <span class="scale-label" data-i18n="Very Unhealthy">Very Unhealthy</span>
+                        <span class="scale-range">201-300</span>
+                    </div>
+                    <div class="scale-item hazardous">
+                        <span class="scale-label" data-i18n="Hazardous">Hazardous</span>
+                        <span class="scale-range">301+</span>
+                    </div>
+                </div>
+                <div class="aqi-footer-info">
+                    <span id="aqi-last-updated">Last updated: --</span>
+                </div>
+                
+    <!-- Horoscope Section -->
+                <div class="horoscope-container">
+                    <div class="horoscope-header">
+                        <h3 class="horoscope-title">
+                            <i class="ri-star-smile-line"></i>
+                            <span data-i18n="Weekly Horoscope" data-auto-translate="true">Weekly Horoscope</span>
+                            <span class="horoscope-date-display" id="horoscope-date-display"></span>
+                        </h3>
+                        <div class="horoscope-nav">
+                            <button class="horoscope-nav-btn horoscope-prev" aria-label="Previous">
+                                <i class="ri-arrow-left-line"></i>
+                            </button>
+                            <button class="horoscope-nav-btn horoscope-next" aria-label="Next">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="horoscope-grid">
+                        <!-- Horoscope Article 1 - Aries -->
+                        <article class="horoscope-card" data-sign="aries">
+                            <div class="horoscope-card-header">
+                                <div class="horoscope-sign-icon">
+                                    <i class="ri-venus-line"></i>
+                                </div>
+                                <div class="horoscope-sign-info">
+                                    <h4 class="horoscope-sign-name">Aries</h4>
+                                    <span class="horoscope-date-range">Mar 21 - Apr 19</span>
+                                </div>
+                        <span class="horoscope-lucky-color" data-i18n="Lucky Color">Lucky: Red</span>
+                            </div>
+                            <div class="horoscope-card-body">
+                                <h5 class="horoscope-section-title">
+                                    <i class="ri-double-quotes-l"></i>
+                                    <span class="prediction-label" data-i18n="Weekly Prediction">Weekly Prediction</span>
+                                </h5>
+                                <p class="horoscope-content" data-auto-translate="true">
+                                    This week brings significant opportunities for personal and professional growth. Your natural leadership abilities will help you overcome challenges at work. Financial gains are likely through new partnerships or investments. Focus on building stronger relationships with loved ones and maintain a balanced approach to all endeavors.
+                                </p>
+                                <div class="horoscope-lucky-number">
+                                    <span class="lucky-number-label" data-i18n="Lucky Number">Lucky Number</span>
+                                    <span class="lucky-number-value">7</span>
+                                </div>
+                            </div>
+                            <div class="horoscope-card-footer">
+                                <div class="horoscope-compatibility">
+                                    <i class="ri-heart-fill"></i>
+                                    <span data-i18n="Best Match">Best Match</span>
+                                    <div class="compatibility-signs">
+                                        <span class="compatibility-sign">Sg</span>
+                                        <span class="compatibility-sign">Le</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- Horoscope Article 2 - Taurus -->
+                        <article class="horoscope-card" data-sign="taurus">
+                            <div class="horoscope-card-header">
+                                <div class="horoscope-sign-icon">
+                                    <i class="ri-money-dollar-circle-line"></i>
+                                </div>
+                                <div class="horoscope-sign-info">
+                                    <h4 class="horoscope-sign-name">Taurus</h4>
+                                    <span class="horoscope-date-range">Apr 20 - May 20</span>
+                                </div>
+                                <span class="horoscope-lucky-color">Lucky: Green</span>
+                            </div>
+                            <div class="horoscope-card-body">
+                                <h5 class="horoscope-section-title">
+                                    <i class="ri-double-quotes-l"></i>
+                                    <span class="prediction-label" data-i18n="Weekly Prediction">Weekly Prediction</span>
+                                </h5>
+                                <p class="horoscope-content" data-auto-translate="true">
+                                    This week focuses on stability and security. Build lasting foundations in your career and personal life. Health improvements come from consistent habits and routines. Unexpected romantic opportunities may arise mid-week. Stay grounded and patient with your financial decisions.
+                                </p>
+                                <div class="horoscope-lucky-number">
+                                    <span class="lucky-number-label" data-i18n="Lucky Number">Lucky Number</span>
+                                    <span class="lucky-number-value">4</span>
+                                </div>
+                            </div>
+                            <div class="horoscope-card-footer">
+                                <div class="horoscope-compatibility">
+                                    <i class="ri-heart-fill"></i>
+                                    <span data-i18n="Best Match">Best Match</span>
+                                    <div class="compatibility-signs">
+                                        <span class="compatibility-sign">Vi</span>
+                                        <span class="compatibility-sign">Cp</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!--Bottom section-->
+  
+        </div>
+    </section>
+<!-- Load More Button -->
+<div class="load-more-container">
+    <button class="load-more-btn" id="load-more-btn">
+        <i class="ri-add-line"></i>
+        <span data-i18n="Load More">Load More</span>
+    </button>
+</div>
+<!--Video section-->
+    
+   
+    <section id="video-section" class="video-section">
+        <div class="container">
+            <div class="video-header">
+                <h2 class="video-title">
+                    <span class="video-live-indicator">
+                        <i class="ri-live-fill"></i>
+                    </span>
+                    <span data-i18n="Live Now">Live Now</span>
+                </h2>
+            </div>
+            <div class="video-container">
+                <div class="video-main">
+                    <div class="swiper video-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Video Slide 1 -->
+                            <div class="swiper-slide">
+                                <article class="video-card-main">
+                                    <div class="video-thumbnail">
+                                        <img src="assets/images/20260103082456_big_730x400_7.webp" alt="Video Thumbnail">
+                                        <div class="video-overlay"></div>
+                                        <div class="play-button">
+                                            <i class="ri-play-fill"></i>
+                                        </div>
+                                        <div class="video-duration">12:45</div>
+                                    </div>
+                                    <div class="video-info">
+                                    <h3 class="video-card-title">
+                                            <a href="#" data-auto-translate="true">Breaking: Historic Climate Agreement Reached at Global Summit</a>
+                                        </h3>
+                                        <div class="video-meta">
+                                            <div class="video-author">
+                                                <img src="assets/images/default-123x83.png" alt="Author">
+                                                <span>John Smith</span>
+                                            </div>
+                                            <span class="video-time"><i class="ri-time-line"></i> 1 hour ago</span>
+                                            <span class="video-views"><i class="ri-eye-line"></i> 5.2K views</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Video Slide 2 -->
+                            <div class="swiper-slide">
+                                <article class="video-card-main">
+                                    <div class="video-thumbnail">
+                                        <img src="assets/images/20260103082039_big_730x400_16.webp" alt="Video Thumbnail">
+                                        <div class="video-overlay"></div>
+                                        <div class="play-button">
+                                            <i class="ri-play-fill"></i>
+                                        </div>
+                                        <div class="video-duration">08:30</div>
+                                    </div>
+                                    <div class="video-info">
+                                    <h3 class="video-card-title">
+                                            <a href="#" data-auto-translate="true">Revolutionary AI Healthcare Solution Unveiled by Tech Giant</a>
+                                        </h3>
+                                        <div class="video-meta">
+                                            <div class="video-author">
+                                                <img src="assets/images/default-123x83.png" alt="Author">
+                                                <span>Sarah Johnson</span>
+                                            </div>
+                                            <span class="video-time"><i class="ri-time-line"></i> 3 hours ago</span>
+                                            <span class="video-views"><i class="ri-eye-line"></i> 8.1K views</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Video Slide 3 -->
+                            <div class="swiper-slide">
+                                <article class="video-card-main">
+                                    <div class="video-thumbnail">
+                                        <img src="assets/images/20260102081509_big_730x400_37.webp" alt="Video Thumbnail">
+                                        <div class="video-overlay"></div>
+                                        <div class="play-button">
+                                            <i class="ri-play-fill"></i>
+                                        </div>
+                                        <div class="video-duration">15:20</div>
+                                    </div>
+                                    <div class="video-info">
+<h3 class="video-card-title">
+                                            <a href="#" data-auto-translate="true">Global Markets Rally on Economic Recovery News</a>
+                                        </h3>
+                                        <div class="video-meta">
+                                            <div class="video-author">
+                                                <img src="assets/images/default-123x83.png" alt="Author">
+                                                <span>Mike Brown</span>
+                                            </div>
+                                            <span class="video-time"><i class="ri-time-line"></i> 5 hours ago</span>
+                                            <span class="video-views"><i class="ri-eye-line"></i> 3.4K views</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- Video Slide 4 -->
+                            <div class="swiper-slide">
+                                <article class="video-card-main">
+                                    <div class="video-thumbnail">
+                                        <img src="assets/images/20260101075831_big_730x400_30.webp" alt="Video Thumbnail">
+                                        <div class="video-overlay"></div>
+                                        <div class="play-button">
+                                            <i class="ri-play-fill"></i>
+                                        </div>
+                                        <div class="video-duration">22:15</div>
+                                    </div>
+                                    <div class="video-info">
+<h3 class="video-card-title">
+                                            <a href="#" data-auto-translate="true">Space Exploration: New Discoveries from Mars Mission</a>
+                                        </h3>
+                                        <div class="video-meta">
+                                            <div class="video-author">
+                                                <img src="assets/images/default-123x83.png" alt="Author">
+                                                <span>Emma Wilson</span>
+                                            </div>
+                                            <span class="video-time"><i class="ri-time-line"></i> 1 day ago</span>
+                                            <span class="video-views"><i class="ri-eye-line"></i> 12.8K views</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="video-pagination"></div>
+                        <div class="video-nav">
+                            <button class="video-nav-btn video-prev" aria-label="Previous video">
+                                <i class="ri-arrow-left-line"></i>
+                            </button>
+                            <button class="video-nav-btn video-next" aria-label="Next video">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-sidebar">
+                    <h3 class="sidebar-title" data-i18n="Up Next">Up Next</h3>
+                    <div class="video-thumbs-list">
+                        <!-- Thumbnail 1 -->
+                        <article class="video-thumb-item active" data-index="0">
+                            <div class="thumb-image">
+                                <img src="assets/images/20250621205021_medium_358x215_22.webp" alt="Thumbnail">
+                                <div class="thumb-duration">12:45</div>
+                                <div class="thumb-play-icon">
+                                    <i class="ri-play-fill"></i>
+                                </div>
+                            </div>
+                            <div class="thumb-content">
+                                <h4 class="thumb-title" data-auto-translate="true">Historic Climate Agreement Reached at Global Summit</h4>
+                                <span class="thumb-views">5.2K views</span>
+                            </div>
+                        </article>
+                        <!-- Thumbnail 2 -->
+                        <article class="video-thumb-item" data-index="1">
+                            <div class="thumb-image">
+                                <img src="assets/images/20260102081233_medium_358x215_14.webp" alt="Thumbnail">
+                                <div class="thumb-duration">08:30</div>
+                                <div class="thumb-play-icon">
+                                    <i class="ri-play-fill"></i>
+                                </div>
+                            </div>
+                            <div class="thumb-content">
+                                <h4 class="thumb-title" data-auto-translate="true">Revolutionary AI Healthcare Solution Unveiled</h4>
+                                <span class="thumb-views">8.1K views</span>
+                            </div>
+                        </article>
+                        <!-- Thumbnail 3 -->
+                        <article class="video-thumb-item" data-index="2">
+                            <div class="thumb-image">
+                                <img src="assets/images/20260103082039_medium_358x215_42.webp" alt="Thumbnail">
+                                <div class="thumb-duration">15:20</div>
+                                <div class="thumb-play-icon">
+                                    <i class="ri-play-fill"></i>
+                                </div>
+                            </div>
+                            <div class="thumb-content">
+                                <h4 class="thumb-title" data-auto-translate="true">Global Markets Rally on Economic Recovery</h4>
+                                <span class="thumb-views">3.4K views</span>
+                            </div>
+                        </article>
+                        <!-- Thumbnail 4 -->
+                        <article class="video-thumb-item" data-index="3">
+                            <div class="thumb-image">
+                                <img src="assets/images/20260103082456_medium_358x215_40.webp" alt="Thumbnail">
+                                <div class="thumb-duration">22:15</div>
+                                <div class="thumb-play-icon">
+                                    <i class="ri-play-fill"></i>
+                                </div>
+                            </div>
+                            <div class="thumb-content">
+                                <h4 class="thumb-title" data-auto-translate="true">Space Exploration: New Discoveries from Mars</h4>
+                                <span class="thumb-views">12.8K views</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More News and Latest Reviews Section - Three Column Layout -->
+    <section class="block-wrapper p-bottom-0">
+        <div class="container">
+            <div class="three-column-row">
+                <!-- Column 1: More News -->
+                <div class="more-news-col">
+                    <div class="more-news block color-default">
+                        <h3 class="block-title"><span data-i18n="More News">More News</span></h3>
+
+                        <div class="news-articles-list">
+                            <!-- Article 1 -->
+                            <div class="post-block-style post-float-half clearfix">
+                                  <a class="post-cat" href="#">Business</a>
+                                <div class="post-thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="assets/images/20260103082456_medium_358x215_40.webp" alt="">
+                                    </a>
+                                </div>
+                              
+                                <div class="post-content">
+                                    <h2 class="post-title">
+                                        <a href="#" data-auto-translate="true">Stock Markets Hit Record High as Economic Recovery Accelerates</a>
+                                    </h2>
+                                    <div class="post-meta">
+                                        <span class="post-author"><a href="#">John Doe</a></span>
+                                        <span class="post-date">Dec 17, 2025</span>
+                                    </div>
+                                    <p data-auto-translate="true">Stock markets worldwide surge as major economies report stronger than expected economic recovery figures.</p>
+                                </div>
+                            </div>
+
+                            <div class="gap-20"></div>
+
+                            <!-- Article 2 -->
+                            <div class="post-block-style post-float-half clearfix">
+                                <div class="post-thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="assets/images/20260103082039_medium_358x215_42.webp" alt="">
+                                    </a>
+                                </div>
+                                <a class="post-cat" href="#">Technology</a>
+                                <div class="post-content">
+                                    <h2 class="post-title">
+                                        <a href="#" data-auto-translate="true">Revolutionary AI Breakthrough Promises to Transform Healthcare</a>
+                                    </h2>
+                                    <div class="post-meta">
+                                        <span class="post-author"><a href="#">Sarah Johnson</a></span>
+                                        <span class="post-date">Dec 16, 2025</span>
+                                    </div>
+                                    <p data-auto-translate="true">Tech giant announces breakthrough AI system that can diagnose diseases with unprecedented accuracy.</p>
+                                </div>
+                            </div>
+
+                            <div class="gap-20"></div>
+
+                            <!-- Article 3 -->
+                            <div class="post-block-style post-float-half clearfix">
+                                <div class="post-thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="assets/images/20260102081509_medium_358x215_28.webp" alt="">
+                                    </a>
+                                </div>
+                                <a class="post-cat" href="#">Sports</a>
+                                <div class="post-content">
+                                    <h2 class="post-title">
+                                        <a href="#" data-auto-translate="true">Historic Victory: Underdog Team Clinches Championship Title</a>
+                                    </h2>
+                                    <div class="post-meta">
+                                        <span class="post-author"><a href="#">Mike Brown</a></span>
+                                        <span class="post-date">Dec 15, 2025</span>
+                                    </div>
+                                    <p data-auto-translate="true">In a stunning upset, the underdog team has claimed the championship title in a thrilling final match.</p>
+                                </div>
+                            </div>
+
+                            <div class="gap-20"></div>
+
+                            <!-- Article 4 -->
+                            <div class="post-block-style post-float-half clearfix">
+                                <div class="post-thumb">
+                                    <a href="#">
+                                        <img class="img-fluid" src="assets/images/20260102081233_medium_358x215_14.webp" alt="">
+                                    </a>
+                                </div>
+                                <a class="post-cat" href="#">Politics</a>
+                                <div class="post-content">
+                                    <h2 class="post-title">
+                                        <a href="#" data-auto-translate="true">Global Leaders Announce Landmark Climate Agreement at Summit</a>
+                                    </h2>
+                                    <div class="post-meta">
+                                        <span class="post-author"><a href="#">Emma Wilson</a></span>
+                                        <span class="post-date">Dec 14, 2025</span>
+                                    </div>
+                                    <p data-auto-translate="true">World leaders gather to sign unprecedented climate agreement targeting carbon emissions reduction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Latest Reviews -->
+                <div class="reviews-col">
+                    <div class="sidebar sidebar-right">
+                        <div class="widget color-default">
+                            <h3 class="block-title"><span data-i18n="Latest Reviews">Latest Reviews</span></h3>
+                            <div class="list-post-block">
+                                <ul class="list-post review-post-list">
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251231081229_small_123x83_21.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">Award-Winning Film Breaks Box Office Records</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251227082048_small_123x83_6.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">New Study Reveals Revolutionary Treatment</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                         <div class="widget color-default">
+<h3 class="block-title"><span data-i18n="Latest Reviews">Latest Reviews</span></h3>
+                            <div class="list-post-block">
+                                <ul class="list-post review-post-list">
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251231081229_small_123x83_21.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">Award-Winning Film Breaks Box Office Records</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251227082048_small_123x83_6.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">New Study Reveals Revolutionary Treatment</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251227081558_small_123x83_22.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">Cryptocurrency Market Analysis 2025</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Newsletter -->
+                <div class="newsletter-col">
+                    <div class="sidebar sidebar-right">
+                        <div class="widget m-bottom-0">
+                            <h3 class="block-title"><span data-i18n="Newsletter">Newsletter</span></h3>
+                        <div class="ts-newsletter">
+                                <div class="newsletter-introtext">
+                                    <h4 data-i18n="Get Updates">Get Updates</h4>
+                                    <p data-i18n="Subscribe our newsletter to get the best stories into your inbox!">Subscribe our newsletter to get the best stories into your inbox!</p>
+                                </div>
+                                <div class="newsletter-form">
+                                    <form action="#" method="post">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="newsletter-form-email" class="form-control form-control-lg" placeholder="E-mail" autocomplete="off">
+                                            <button class="btn btn-primary" data-i18n="Subscribe">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="widget color-default">
+                            <h3 class="block-title"><span data-i18n="Recent Post">Recent Post</span></h3>
+                            <div class="list-post-block">
+                                <ul class="list-post review-post-list">
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251231081229_small_123x83_21.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">Award-Winning Film Breaks Box Office Records</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251227082048_small_123x83_6.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">New Study Reveals Revolutionary Treatment</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="clearfix">
+                                        <div class="post-block-style post-float clearfix">
+                                            <div class="post-thumb">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="assets/images/20251227081558_small_123x83_22.webp" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post-content">
+                                                <h2 class="post-title">
+                                                    <a href="#" data-auto-translate="true">Cryptocurrency Market Analysis 2025</a>
+                                                </h2>
+                                                <div class="post-meta">
+                                                    <div class="review-stars">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                        <i class="fa fa-star-o"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Load More Button -->
+<div class="load-more-container">
+    <button class="load-more-btn" id="load-more-btn">
+        <i class="ri-add-line"></i>
+        <span data-i18n="Load More">Load More</span>
+    </button>
+</div>
+
+    <!--FOOTER SECTION-->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-col footer-brand">
+                        <div class="footer-logo">
+                           <h3>PTS NEWS</h3>
+                        </div>
+                        <p class="footer-description" data-i18n-html="Stay informed with the latest news and updates from around the world. We deliver accurate, timely, and comprehensive coverage of politics, business, sports, science, and technology." data-auto-translate="true">
+                            Stay informed with the latest news and updates from around the world. We deliver accurate, timely, and comprehensive coverage of politics, business, sports, science, and technology.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon facebook" aria-label="Facebook">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter" aria-label="Twitter">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram" aria-label="Instagram">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="#" class="social-icon youtube" aria-label="YouTube">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                            <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">
+                            <span class="title-icon"><i class="ri-link"></i></span>
+                            <span data-i18n="Quick Links">Quick Links</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Home">Home</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="About Us">About Us</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Contact">Contact</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Advertise">Advertise</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Careers">Careers</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Sitemap">Sitemap</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories Column -->
+                    <div class="footer-col">
+                        <h4 class="footer-title">
+                            <span class="title-icon"><i class="ri-layout-grid-fill"></i></span>
+                            <span data-i18n="Categories">Categories</span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Politics">Politics</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Business">Business</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Sports">Sports</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Science">Science</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Tech">Tech</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Entertainment">Entertainment</span></a></li>
+                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> <span data-i18n="Health">Health</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter Column -->
+                    <div class="footer-col footer-newsletter">
+                        <h4 class="footer-title">
+                            <span class="title-icon"><i class="ri-mail-open-line"></i></span>
+                            <span data-i18n="Newsletter">Newsletter</span>
+                        </h4>
+<p class="newsletter-text" data-i18n="Subscribe to our newsletter and get the latest news delivered to your inbox.">Subscribe to our newsletter and get the latest news delivered to your inbox.</p>
+<form class="newsletter-form" action="#" method="post">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Enter your email address" data-i18n-placeholder="Enter your email address" required>
+                                <button type="submit" class="submit-btn">
+                                    <i class="ri-send-plane-fill"></i>
+                                </button>
+                            </div>
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 <a href="#">PTS NEWS</a>. All rights reserved. Designed with <i class="ri-heart-fill" style="color: var(--accent);"></i> for news enthusiasts.</p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="#"><span data-i18n="Privacy Policy">Privacy Policy</span></a>
+                        <span class="separator">|</span>
+                        <a href="#"><span data-i18n="Terms of Service">Terms of Service</span></a>
+                        <span class="separator">|</span>
+                        <a href="#"><span data-i18n="Cookie Policy">Cookie Policy</span></a>
+                        <span class="separator">|</span>
+                        <a href="#"><span data-i18n="Help Center">Help Center</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js?v=3"></script>
+    <script src="admin-articles.js"></script>
+    
+</body>
+</html>

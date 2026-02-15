@@ -1,0 +1,423 @@
+/* =============================================
+   SPORTS SECTION - Dynamic Highlight Animations
+   ============================================= */
+.sports-section {
+    padding: 40px 0;
+    background: linear-gradient(180deg, #f5f7ff 0%, #eef2ff 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+.sports-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sports-title {
+    background: var(--accent);
+    padding: 6px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    border-radius: 3px;
+    max-width: 200px;
+    color: white;
+}
+
+.sports-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.sports-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sports-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    /* Entrance animation */
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInRow 0.6s ease forwards;
+}
+
+.sports-row:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideInRow {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sports-article {
+    flex: 1;
+    background: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    position: relative;
+    border: 1px solid var(--border-color);
+    /* Article entrance animation */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: articleFadeIn 0.5s ease forwards;
+}
+
+.sports-article:nth-child(1) { animation-delay: 0.1s; }
+.sports-article:nth-child(2) { animation-delay: 0.2s; }
+.sports-article:nth-child(3) { animation-delay: 0.3s; }
+.sports-article:nth-child(4) { animation-delay: 0.4s; }
+.sports-article:nth-child(5) { animation-delay: 0.5s; }
+.sports-article:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes articleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow border effect */
+.sports-article::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sports-article:hover::before {
+    opacity: 1;
+    animation: borderGlow 1.5s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.sports-article:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 26, 86, 0.2);
+}
+
+/* Top progress bar animation */
+.sports-article::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #ff6b6b);
+    transition: width 0.4s ease;
+    z-index: 2;
+}
+
+.sports-article:hover::after {
+    width: 100%;
+}
+
+/* Corner decoration */
+.article-image .corner {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transition: all 0.3s ease;
+}
+
+.article-image .corner-tl {
+    top: 0;
+    left: 0;
+    border-width: 25px 25px 0 0;
+    border-color: var(--accent) transparent transparent transparent;
+    transform: scale(0);
+}
+
+.article-image .corner-br {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0 25px 25px;
+    border-color: transparent transparent var(--navy) transparent;
+    transform: scale(0);
+}
+
+.sports-article:hover .corner-tl,
+.sports-article:hover .corner-br {
+    transform: scale(1);
+}
+
+.article-image {
+    flex: 0 0 110px;
+    overflow: hidden;
+    position: relative;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.sports-article:hover .article-image img {
+    transform: scale(1.15) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+/* Floating particles effect */
+.article-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(242, 21, 23, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sports-article:hover .article-content::before {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.article-content {
+    flex: 1;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.article-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.article-title a {
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+}
+
+/* Wavy underline animation */
+.article-title a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.article-title a:hover {
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+.article-title a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.article-summary {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    flex-grow: 0;
+    transition: color 0.3s ease;
+}
+
+.sports-article:hover .article-summary {
+    color: var(--text);
+}
+
+.article-date {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.article-date::before {
+    content: '🕐';
+    font-size: 12px;
+}
+
+.sports-article:hover .article-date {
+    color: var(--accent);
+}
+
+/* Scale icon on hover */
+.article-date::before {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.sports-article:hover .article-date::before {
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sports-row {
+        flex-wrap: wrap;
+    }
+
+    .sports-article {
+        flex: 0 0 calc(33.33% - 10px);
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sports-content {
+        padding: 0 15px;
+    }
+
+    .sports-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .sports-article {
+        flex: 1;
+        display: flex;
+    }
+
+    .article-image {
+        width: 130px;
+        height: auto;
+        min-height: 100px;
+    }
+
+    .article-content {
+        padding: 12px 15px;
+    }
+
+    .sports-title {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-section {
+        padding: 30px 0;
+    }
+
+    .sports-header {
+        margin-bottom: 25px;
+    }
+
+    .sports-title {
+        font-size: 20px;
+        padding: 8px 18px;
+    }
+
+    .sports-article {
+        flex-direction: row;
+    }
+
+    .article-image {
+        flex: 0 0 100px;
+        width: 100px;
+        height: auto;
+        min-height: 85px;
+    }
+
+    .article-title {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .article-summary {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .article-date {
+        font-size: 10px;
+    }
+}
+
+/* =============================================
+   SPORTS SECTION DARK MODE
+   ============================================= */
+body.dark-mode .sports-section {
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+body.dark-mode .sports-title {
+    color: #fff;
+}
+
+body.dark-mode .sports-article {
+    background: #1a1a1a;
+    border-color: #333;
+}
+
+body.dark-mode .article-title {
+    color: #e0e0e0;
+}
+
+body.dark-mode .article-title a:hover {
+    color: #e53935;
+}
+
+body.dark-mode .article-summary {
+    color: #aaa;
+}
+
+body.dark-mode .sports-article:hover .article-summary {
+    color: #ccc;
+}
+
+body.dark-mode .article-date {
+    color: #888;
+}
+
+body.dark-mode .sports-article:hover .article-date {
+    color: #e53935;
+}
+

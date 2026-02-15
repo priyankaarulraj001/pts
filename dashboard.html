@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PTS NEWS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; background: #f0f2f5; min-height: 100vh; }
+        .dashboard-header { background: linear-gradient(135deg, #001A56 0%, #002a7a 100%); color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
+        .dashboard-logo { display: flex; align-items: center; gap: 15px; }
+       .dashboard-logo img {
+    width: 100px;
+    height: auto;
+}
+.logo-text{
+    display: flex;
+}
+        .dashboard-logo h1 { font-size: 24px; font-weight: 700; }
+       .dashboard-logo span {
+    background: #F21517;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.dashboard-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 10px;
+}
+        .user-info { display: flex; align-items: center; gap: 12px; }
+        .user-avatar { width: 45px; height: 45px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .user-details { text-align: right; }
+        .user-name { font-size: 16px; font-weight: 600; }
+        .user-role { font-size: 12px; opacity: 0.8; }
+        .logout-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
+        .logout-btn:hover { background: #F21517; border-color: #F21517; }
+        .dashboard-content { padding: 40px; max-width: 1400px; margin: 0 auto; }
+        .dashboard-title { font-size: 28px; font-weight: 700; color: #001A56; margin-bottom: 30px; }
+        .welcome-banner { background: linear-gradient(135deg, #001A56 0%, #002a7a 100%); border-radius: 15px; padding: 30px 40px; margin-bottom: 40px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 30px rgba(0, 26, 86, 0.3); }
+        .welcome-text h2 { font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+        .welcome-text p { font-size: 15px; opacity: 0.9; }
+        .welcome-date { text-align: right; }
+        .welcome-date .date { font-size: 36px; font-weight: 800; }
+        .welcome-date .time { font-size: 18px; opacity: 0.8; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .stat-card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .stat-card::before { content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%; }
+        .stat-card.blue::before { background: linear-gradient(180deg, #001A56, #002a7a); }
+        .stat-card.red::before { background: linear-gradient(180deg, #F21517, #ff4757); }
+        .stat-card.green::before { background: linear-gradient(180deg, #00d4aa, #00b894); }
+        .stat-card.orange::before { background: linear-gradient(180deg, #f9c74f, #f8961e); }
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        .stat-icon { width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+        .stat-card.blue .stat-icon { background: rgba(0, 26, 86, 0.1); color: #001A56; }
+        .stat-card.red .stat-icon { background: rgba(242, 21, 23, 0.1); color: #F21517; }
+        .stat-card.green .stat-icon { background: rgba(0, 212, 170, 0.1); color: #00d4aa; }
+        .stat-card.orange .stat-icon { background: rgba(249, 199, 79, 0.1); color: #f9c74f; }
+        .stat-value { font-size: 36px; font-weight: 800; color: #333; margin-bottom: 5px; }
+        .stat-label { font-size: 14px; color: #666; font-weight: 500; }
+        .quick-actions { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); margin-bottom: 40px; }
+        .section-title { font-size: 20px; font-weight: 700; color: #001A56; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; }
+        .section-title i { color: #F21517; }
+        .actions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .action-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px 20px; background: #f8f9fa; border: 2px solid #e5e5e5; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; gap: 15px; }
+        .action-btn:hover { background: #001A56; border-color: #001A56; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0, 26, 86, 0.2); }
+        .action-btn i { font-size: 36px; color: #001A56; transition: color 0.3s ease; }
+        .action-btn:hover i { color: white; }
+        .action-btn span { font-size: 15px; font-weight: 600; color: #333; transition: color 0.3s ease; }
+        .action-btn:hover span { color: white; }
+        .recent-activity { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); }
+        .activity-list { display: flex; flex-direction: column; gap: 15px; }
+        .activity-item { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; transition: all 0.3s ease; }
+        .activity-item:hover { background: #f0f2f5; }
+        .activity-icon { width: 45px; height: 45px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .activity-icon.blue { background: rgba(0, 26, 86, 0.1); color: #001A56; }
+        .activity-icon.green { background: rgba(0, 212, 170, 0.1); color: #00b894; }
+        .activity-content { flex: 1; }
+        .activity-title { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 3px; }
+        .activity-time { font-size: 13px; color: #888; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 9999; align-items: center; justify-content: center; }
+        .modal-overlay.show { display: flex; }
+        .modal-content { background: white; border-radius: 15px; padding: 30px; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .modal-header h2 { color: #001A56; font-size: 22px; font-weight: 700; }
+        .modal-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #666; }
+        .modal-close:hover { color: #F21517; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; color: #333; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 15px; font-family: 'Manrope', sans-serif; box-sizing: border-box; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #001A56; outline: none; }
+        .image-upload-area { border: 2px dashed #e5e5e5; border-radius: 8px; padding: 30px; text-align: center; cursor: pointer; }
+        .image-upload-area i { font-size: 40px; color: #001A56; margin-bottom: 10px; display: block; }
+        .image-upload-area p { color: #666; font-size: 14px; margin: 0; }
+        .submit-btn { width: 100%; padding: 15px; background: #F21517; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="dashboard-logo">
+            <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS">
+            <div class="logo-text"><h1>PTS NEWS</h1><span>Admin Panel</span></div>
+        <div class="dashboard-user">
+            <div class="user-info">
+                <div class="user-avatar"><i class="ri-user-line"></i></div>
+                <div class="user-details">
+                    <div class="user-name" id="adminName">Admin</div>
+                    <div class="user-role">Administrator</div>
+            </div>
+            <a href="#" class="logout-btn" id="logoutBtn"><i class="ri-logout-box-r-line"></i><span>Logout</span></a>
+        </div>
+    </header>
+    <main class="dashboard-content">
+        <h1 class="dashboard-title">Dashboard Overview</h1>
+        <div class="welcome-banner">
+            <div class="welcome-text">
+                <h2>Welcome back, <span id="welcomeName">Admin</span>!</h2>
+                <p>Here's what's happening with your news portal today.</p>
+            </div>
+            <div class="welcome-date">
+                <div class="date" id="currentDate"></div>
+                <div class="time" id="currentTime"></div>
+        </div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card blue">
+                <div class="stat-icon"><i class="ri-article-line"></i></div>
+                <div class="stat-value" id="articleCount">1,234</div>
+                <div class="stat-label">Total Articles</div>
+            </div>
+            <div class="stat-card red">
+                <div class="stat-icon"><i class="ri-eye-line"></i></div>
+                <div class="stat-value">45.2K</div>
+                <div class="stat-label">Total Views</div>
+                </div>
+            <div class="stat-card green">
+                <div class="stat-icon"><i class="ri-user-follow-line"></i></div>
+                <div class="stat-value">8,547</div>
+                <div class="stat-label">Subscribers</div>
+                </div>
+
+            <div class="stat-card orange">
+                <div class="stat-icon"><i class="ri-message-3-line"></i></div>
+                <div class="stat-value">342</div>
+                <div class="stat-label">Comments</div>
+        </div>
+        </div>
+       
+
+
+        <div class="quick-actions">
+            <h2 class="section-title"><i class="ri-flashlight-line"></i> Quick Actions</h2>
+            <div class="actions-grid">
+                <a href="#" class="action-btn" id="addArticleBtn"><i class="ri-add-circle-line"></i><span>Add New Article</span></a>
+                <a href="#" class="action-btn"><i class="ri-image-add-line"></i><span>Upload Media</span></a>
+                <a href="#" class="action-btn"><i class="ri-user-settings-line"></i><span>Manage Users</span></a>
+                <a href="#" class="action-btn"><i class="ri-settings-3-line"></i><span>Settings</span></a>
+                <a href="#" class="action-btn"><i class="ri-bar-chart-line"></i><span>View Analytics</span></a>
+                <a href="#" class="action-btn"><i class="ri-mail-send-line"></i><span>Send Newsletter</span></a>
+            </div>
+        <div class="recent-activity">
+            <h2 class="section-title"><i class="ri-time-line"></i> Recent Activity</h2>
+            <div class="activity-list" id="activityList">
+                <div class="activity-item">
+                    <div class="activity-icon blue"><i class="ri-edit-line"></i></div>
+                    <div class="activity-content">
+                        <div class="activity-title">Article "Climate Summit Updates" was published</div>
+                        <div class="activity-time">2 minutes ago</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-icon green"><i class="ri-user-add-line"></i></div>
+                    <div class="activity-content">
+                        <div class="activity-title">New subscriber: john.doe@email.com</div>
+                        <div class="activity-time">15 minutes ago</div>
+                </div>
+        </div>
+    </main>
+    <div class="modal-overlay" id="articleModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Article</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="articleForm">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="articleCategory" required>
+                        <option value="">Select Category</option>
+                        <optgroup label="Politics">
+                            <option value="Politics - Election Updates">Election Updates</option>
+                            <option value="Politics - Government">Government</option>
+                            <option value="Politics - World Politics">World Politics</option>
+                            <option value="Politics - Analysis">Analysis</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="Business - Stock Market">Stock Market</option>
+                            <option value="Business - Startups">Startups</option>
+                            <option value="Business - Economy">Economy</option>
+                            <option value="Business - Companies">Companies</option>
+                        </optgroup>
+                        <optgroup label="Sports">
+                            <option value="Sports - Cricket">Cricket</option>
+                            <option value="Sports - Football">Football</option>
+                            <option value="Sports - Tennis">Tennis</option>
+                            <option value="Sports - Olympics">Olympics</option>
+                        </optgroup>
+                        <optgroup label="Science">
+                            <option value="Science - Space">Space</option>
+                            <option value="Science - Research">Research</option>
+                            <option value="Science - Technology">Technology</option>
+                            <option value="Science - Environment">Environment</option>
+                        </optgroup>
+                        <optgroup label="Tech">
+                            <option value="Tech - Artificial Intelligence">Artificial Intelligence</option>
+                            <option value="Tech - Gadgets">Gadgets</option>
+                            <option value="Tech - Apps">Apps</option>
+                            <option value="Tech - Software">Software</option>
+                        </optgroup>
+                        <optgroup label="Health">
+                            <option value="Health">Health</option>
+                        </optgroup>
+                        <optgroup label="Education">
+                            <option value="Education">Education</option>
+                        </optgroup>
+                        <optgroup label="Entertainment">
+                            <option value="Entertainment">Entertainment</option>
+                        </optgroup>
+                        <optgroup label="Finance">
+                            <option value="Finance">Finance</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Article Title</label>
+                    <input type="text" id="articleTitle" placeholder="Enter article title" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea id="articleContent" placeholder="Enter article content" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Featured Image</label>
+                    <div class="image-upload-area" id="imageUploadArea">
+                        <i class="ri-image-add-line"></i>
+                        <p>Click to upload image</p>
+                        <input type="file" id="articleImage" accept="image/*" style="display:none;">
+                    </div>
+                <button type="submit" class="submit-btn">Upload Article</button>
+            </form>
+        </div>
+        </div>
+    <script>
+        function checkAuth() { if (!localStorage.getItem('adminAuth')) { window.location.href = 'admin-login.html'; return false; } return true; }
+        function getAdminName() { return localStorage.getItem('adminUser') || 'Admin'; }
+        if (checkAuth()) { 
+            document.getElementById('adminName').textContent = getAdminName(); 
+            document.getElementById('welcomeName').textContent = getAdminName(); 
+            function updateDateTime() { 
+                const now = new Date(); 
+                document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); 
+                document.getElementById('currentTime').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }); 
+            } 
+            updateDateTime(); 
+            setInterval(updateDateTime, 1000); 
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]'); 
+            document.getElementById('articleCount').textContent = (1234 + articles.length).toLocaleString(); 
+        }
+        document.getElementById('logoutBtn').addEventListener('click', function(e) { 
+            e.preventDefault(); 
+            localStorage.removeItem('adminAuth'); 
+            localStorage.removeItem('adminUser'); 
+            window.location.href = 'admin-login.html'; 
+        });
+        const modal = document.getElementById('articleModal'); 
+        const addArticleBtn = document.getElementById('addArticleBtn'); 
+        const closeModal = document.getElementById('closeModal');
+        addArticleBtn.addEventListener('click', function(e) { e.preventDefault(); modal.classList.add('show'); });
+        closeModal.addEventListener('click', function() { modal.classList.remove('show'); });
+        modal.addEventListener('click', function(e) { if (e.target === modal) modal.classList.remove('show'); });
+        const imageUploadArea = document.getElementById('imageUploadArea'); 
+        const articleImage = document.getElementById('articleImage');
+        imageUploadArea.addEventListener('click', function() { articleImage.click(); });
+        articleImage.addEventListener('change', function() { 
+            if (this.files && this.files[0]) { 
+                imageUploadArea.innerHTML = '<p style="color:#00b894;font-size:14px;margin:0;"><i class="ri-check-line"></i> Image selected: ' + this.files[0].name + '</p>'; 
+            } 
+        });
+        
+        // Store the uploaded image data URL
+        let uploadedImageData = null;
+        
+        articleImage.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    uploadedImageData = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        document.getElementById('articleForm').addEventListener('submit', function(e) { 
+            e.preventDefault(); 
+            const category = document.getElementById('articleCategory').value; 
+            const title = document.getElementById('articleTitle').value; 
+            const content = document.getElementById('articleContent').value; 
+            if (!category || !title || !content) { alert('Please fill all fields!'); return; } 
+            
+            // Only include image if user actually uploaded one
+            const article = { 
+                id: Date.now(), 
+                category: category, 
+                title: title, 
+                content: content, 
+                date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }), 
+                image: uploadedImageData || null  // Use uploaded image or null if no image
+            };
+            let articles = JSON.parse(localStorage.getItem('adminArticles') || '[]'); 
+            articles.unshift(article); 
+            localStorage.setItem('adminArticles', JSON.stringify(articles)); 
+            document.getElementById('articleCount').textContent = (1234 + articles.length).toLocaleString(); 
+            const activityList = document.getElementById('activityList'); 
+            const newActivity = document.createElement('div'); 
+            newActivity.className = 'activity-item'; 
+            newActivity.innerHTML = '<div class="activity-icon blue"><i class="ri-edit-line"></i></div><div class="activity-content"><div class="activity-title">Article "' + title + '" was published</div><div class="activity-time">Just now</div>'; 
+            activityList.insertBefore(newActivity, activityList.firstChild); 
+            alert('Article uploaded successfully!'); 
+            modal.classList.remove('show'); 
+            document.getElementById('articleForm').reset(); 
+            imageUploadArea.innerHTML = '<i class="ri-image-add-line"></i><p>Click to upload image</p>'; 
+        });
+    </script>
+</body>
+</html>
