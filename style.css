@@ -9275,13 +9275,13 @@ body.dark-mode .app-btn:hover {
    ARTICLE DETAIL PAGE STYLES
    ============================================= */
 .article-content-section {
-    padding: 40px 0;
+    padding: 0px 20px;
     background: var(--bg-gray);
     min-height: 60vh;
 }
 
 .article-content-section .container {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -9675,7 +9675,7 @@ body.dark-mode .not-found-content p {
 
 /* Article Layout with Sidebar */
 .article-layout {
-    display: grid;
+    display: flex !important;
     grid-template-columns: 1fr 350px;
     gap: 30px;
     align-items: start;
@@ -9867,7 +9867,7 @@ body.dark-mode .not-found-content p {
 
 /* Author Box */
 .author-box {
-    display: flex;
+    display: none;
     align-items: flex-start;
     gap: 20px;
     padding: 25px 40px;

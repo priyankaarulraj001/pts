@@ -6,7 +6,7 @@
     <title>Article - PTS NEWS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-sports.css">
-   <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/20210512190118_logo_21.png">
@@ -16,373 +16,405 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
 </head>
 <body>
+    <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-content">
             <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS" class="preloader-logo">
         </div>
+    </div>
+
     <div class="main-content">
-
-<header class="site-header">
-    <div class="header-top container">
-        <div class="logo-area">
-            <a href="index.html" class="logo-link">
-                <img src="assets/images/20210512190118_logo_21.png" class="logo">
-            </a>
-            <div class="search-box">
-                <form>
-                    <input type="text" data-i18n-placeholder="Search ..." placeholder="Search ...">
-                    <button type="submit"><i class="ri-search-line"></i></button>
-                </form>
-            </div>
-            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
-                <i class="ri-menu-line"></i>
-            </button>
-             <nav class="main-nav">
-        <div class="nav-inner container">
-            <ul class="menu">
-                <li><a href="index.html" data-i18n="Home">Home</a></li>
-                <li class="has-mega">
-                    <a href="#" data-i18n="Politics">Politics</a>
-                    <div class="mega-menu">
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                            <h3 data-i18n="Election Updates">Election Updates</h3>
-                            <p data-i18n="Latest election news and insights.">Latest election news and insights.</p>
-                        </div>
-                        <div class="mega-card">
-                            <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                            <h3 data-i18n="Government">Government</h3>
-                            <p data-i18n="Policy decisions and governance.">Policy decisions and governance.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                            <h3 data-i18n="World Politics">World Politics</h3>
-                            <p data-i18n="International political events.">International political events.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                            <h3 data-i18n="Analysis">Analysis</h3>
-                            <p data-i18n="Expert opinions and deep dives.">Expert opinions and deep dives.</p>
-                        </div>
-                </li>
-                <li class="has-mega">
-                    <a href="#" data-i18n="Business">Business</a>
-                    <div class="mega-menu">
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                            <h3 data-i18n="Stock Market">Stock Market</h3>
-                            <p data-i18n="Daily market trends and analysis.">Daily market trends and analysis.</p>
-                        </div>
-                        <div class="mega-card">
-                            <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                            <h3 data-i18n="Startups">Startups</h3>
-                            <p data-i18n="New ventures and funding news.">New ventures and funding news.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                            <h3 data-i18n="Economy">Economy</h3>
-                            <p data-i18n="Economic indicators and policies.">Economic indicators and policies.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                            <h3 data-i18n="Companies">Companies</h3>
-                            <p data-i18n="Corporate news and mergers.">Corporate news and mergers.</p>
-                        </div>
-                </li>
-                <li class="has-mega">
-                    <a href="#" data-i18n="Sports">Sports</a>
-                    <div class="mega-menu">
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                            <h3 data-i18n="Cricket">Cricket</h3>
-                            <p data-i18n="Matches, scores and player updates.">Matches, scores and player updates.</p>
-                        </div>
-                        <div class="mega-card">
-                            <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                            <h3 data-i18n="Football">Football</h3>
-                            <p data-i18n="Leagues, transfers and highlights.">Leagues, transfers and highlights.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                            <h3 data-i18n="Tennis">Tennis</h3>
-                            <p data-i18n="Grand slams and tournament news.">Grand slams and tournament news.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                            <h3 data-i18n="Olympics">Olympics</h3>
-                            <p data-i18n="Games updates and athlete stories.">Games updates and athlete stories.</p>
-                        </div>
-                </li>
-                <li class="has-mega">
-                    <a href="#" data-i18n="Science">Science</a>
-                    <div class="mega-menu">
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                            <h3 data-i18n="Space">Space</h3>
-                            <p data-i18n="NASA, ISRO and space exploration.">NASA, ISRO and space exploration.</p>
-                        </div>
-                        <div class="mega-card">
-                            <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                            <h3 data-i18n="Research">Research</h3>
-                            <p data-i18n="Scientific discoveries and studies.">Scientific discoveries and studies.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                            <h3 data-i18n="Technology">Technology</h3>
-                            <p data-i18n="Tech innovations and breakthroughs.">Tech innovations and breakthroughs.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                            <h3 data-i18n="Environment">Environment</h3>
-                            <p data-i18n="Climate change and ecology news.">Climate change and ecology news.</p>
-                        </div>
-                </li>
-                <li class="has-mega">
-                    <a href="#" data-i18n="Tech">Tech</a>
-                    <div class="mega-menu">
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                            <h3 data-i18n="Artificial Intelligence">Artificial Intelligence</h3>
-                            <p data-i18n="AI developments and applications.">AI developments and applications.</p>
-                        </div>
-                        <div class="mega-card">
-                            <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                            <h3 data-i18n="Gadgets">Gadgets</h3>
-                            <p data-i18n="Latest devices and launches.">Latest devices and launches.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                            <h3 data-i18n="Apps">Apps</h3>
-                            <p data-i18n="Mobile app news and reviews.">Mobile app news and reviews.</p>
-                        </div>
-                        <div class="mega-card">
-                           <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                            <h3 data-i18n="Software">Software</h3>
-                            <p data-i18n="Programming and software updates.">Programming and software updates.</p>
-                        </div>
-                </li>
-            </ul>
-            <div class="header-actions">
-                <a href="#" class="subscribe-btn" data-i18n="Subscribe" data-auto-translate="true">Subscribe</a>
-                <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
-                    <i class="ri-moon-fill"></i>
-                </button>
-                <button id="side-nav-button" class="side-nav-button">
-                    <i class="ri-bar-chart-horizontal-line"></i>
-                </button>
-            </div>
-    </nav>
-        </div>
-</header>
-
-<div class="breaking-news-bar">
-    <div class="container">
-        <div class="breaking-label">
-             <i class="ri-fire-fill"></i> <span data-i18n="Breaking News" data-auto-translate="true">Breaking News</span>
-        </div>
-        <div class="breaking-ticker-wrapper">
-            <div class="breaking-ticker">
-                <span data-auto-translate="true">Global climate summit reaches historic agreement on carbon emissions reduction</span>
-                <span>•</span>
-                <span data-auto-translate="true">Tech giant announces revolutionary AI-powered healthcare solution</span>
-                <span>•</span>
-                <span data-auto-translate="true">International space station celebrates 25 years in orbit</span>
-                <span>•</span>
-                <span data-auto-translate="true">Major economic reform package unveiled by leading nations</span>
-            </div>
-        <div class="date-widget">
-            <span id="date-display"></span>
-        </div>
-        <div class="language-switcher-inline">
-            <select id="language-selector">
-                <option value="en">ENG</option>
-                <option value="tam">தமிழ்</option>
-                <option value="hin">हिंदी</option>
-            </select>
-        </div>
-        <a href="admin-login.html" class="user-icon-btn" title="Admin Login">
-            <i class="ri-user-line"></i>
-        </a>
-    </div>
-
-</div>
-
-<div id="side-nav-overlay" class="side-nav-overlay"></div>
-<div id="side-nav" class="side-nav">
-    <button id="side-nav-close" class="side-nav-close">
-        <i class="ri-close-line"></i>
-    </button>
-    <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS" class="side-nav-logo">
-    <div class="side-nav-description" data-i18n-html="Stay informed with the latest news and updates from us." data-auto-translate="true">
-        Stay informed with the latest news and updates from us.
-    </div>
-     <ul class="sub-menu" id="sub-menu">
-        <li><a href="index.html" data-i18n="Home" data-auto-translate="true">Home</a></li>
-        <li><a href="#" data-i18n="Politics" data-auto-translate="true">Politics</a></li>
-        <li><a href="#" data-i18n="Business" data-auto-translate="true">Business</a></li>
-        <li><a href="#" data-i18n="Sports" data-auto-translate="true">Sports</a></li>
-        <li><a href="#" data-i18n="Science" data-auto-translate="true">Science</a></li>
-        <li><a href="#" data-i18n="Tech" data-auto-translate="true">Tech</a></li>
-    </ul>
-    <div class="social-links">
-        <a href="#" class="social-link facebook"><i class="ri-facebook-fill"></i> <span data-i18n="Facebook" data-auto-translate="true">Facebook</span></a>
-        <a href="#" class="social-link twitter"><i class="ri-twitter-fill"></i> <span data-i18n="Twitter" data-auto-translate="true">Twitter</span></a>
-        <a href="#" class="social-link instagram"><i class="ri-instagram-fill"></i> <span data-i18n="Instagram" data-auto-translate="true">Instagram</span></a>
-        <a href="#" class="social-link youtube"><i class="ri-youtube-fill"></i> <span data-i18n="YouTube" data-auto-translate="true">YouTube</span></a>
-    </div>
-
-    <!-- Article Content Section -->
-    <section class="article-content-section">
-        <div class="container">
-            <!-- Breadcrumb -->
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
-                <a href="#" id="breadcrumb-category">Category</a>
-                <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
-                <span class="current" id="breadcrumb-title">Article</span>
-            </div>
-
-            <!-- Article Not Found -->
-            <div id="article-not-found" class="article-not-found" style="display: none;">
-                <div class="not-found-content">
-                    <i class="ri-article-line"></i>
-                    <h2>Article Not Found</h2>
-                    <p>The article you're looking for doesn't exist or has been removed.</p>
-                    <a href="index.html" class="back-home-btn">Back to Home</a>
-                </div>
-
-            <!-- Main Article with Sidebar -->
-            <div id="article-display" class="article-layout" style="display: none;">
-                <!-- Main Column -->
-                <div class="article-main-column">
-                    <div class="article-header-new">
-                        <div class="article-category">
-                            <span id="article-category" class="category-tag"></span>
-                        </div>
-                        <h1 id="article-title" class="article-title-new"></h1>
-                        <div class="article-meta-new">
-                            <div class="author-info">
-                                <div class="author-avatar">
-                                    <img src="assets/images/default-123x83.png" alt="Author">
-                                </div>
-                                <div class="author-details">
-                                    <span class="by">By</span>
-                                    <a href="#">PTS News</a>
-                                </div>
-                            <div class="post-date">
-                                <i class="ri-calendar-line"></i>
-                                <span id="article-date"></span>
-                            </div>
-                            <div class="article-views">
-                                <i class="ri-eye-line"></i>
-                                <span id="article-views">0 views</span>
-                            </div>
-                    </div>
-
-                    <!-- Full Width Image -->
-                    <div class="article-image-container">
-                        <img id="article-image" src="" alt="">
-                    </div>
-
-                    <!-- Social Share Buttons -->
-                    <div class="article-share">
-                        <span class="share-label">Share:</span>
-                        <div class="share-buttons">
-                            <a href="#" class="share-btn facebook" onclick="shareArticle('facebook')"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="share-btn twitter" onclick="shareArticle('twitter')"><i class="ri-twitter-x-line"></i></a>
-                            <a href="#" class="share-btn whatsapp" onclick="shareArticle('whatsapp')"><i class="ri-whatsapp-fill"></i></a>
-                            <a href="#" class="share-btn linkedin" onclick="shareArticle('linkedin')"><i class="ri-linkedin-fill"></i></a>
-                            <a href="#" class="share-btn copy-link" onclick="shareArticle('copy')"><i class="ri-link"></i></a>
-                        </div>
-
-                    <!-- Article Content -->
-                    <div class="article-body-new">
-                        <p id="article-summary" class="article-lead"></p>
-                        <div id="article-content" class="article-text-new"></div>
-
-                    <!-- Author Box -->
-                    <div class="author-box">
-                        <div class="author-box-avatar">
-                            <img src="assets/images/default-123x83.png" alt="Author">
-                        </div>
-                        <div class="author-box-info">
-                            <h4>PTS News</h4>
-                            <p>Your trusted source for the latest news and updates. We deliver accurate, timely, and comprehensive coverage across politics, business, sports, science, and technology.</p>
-                        </div>
-                </div>
-
-                <!-- Sidebar -->
-                <aside class="article-sidebar">
-                    <div class="sidebar-widget">
-                        <h3 class="widget-title"><span class="title-icon"><i class="ri-links-line"></i></span>Related Articles</h3>
-                        <div class="related-articles-list" id="related-articles"></div>
-                    <div class="sidebar-widget">
-                        <h3 class="widget-title"><span class="title-icon"><i class="ri-fire-line"></i></span>Trending Now</h3>
-                        <div class="trending-list" id="trending-articles"></div>
-                    <div class="sidebar-widget newsletter-widget">
-                        <div class="newsletter-box">
-                            <h4>Subscribe to Newsletter</h4>
-                            <p>Get the latest news delivered to your inbox</p>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Enter your email">
-                                <button type="submit"><i class="ri-send-plane-fill"></i></button>
-                            </form>
-                        </div>
-                </aside>
-            </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-col footer-brand">
-                        <div class="footer-logo"><h3>PTS NEWS</h3></div>
-                        <p class="footer-description">Stay informed with the latest news and updates from around the world.</p>
-                        <div class="footer-social">
-                            <a href="#" class="social-icon facebook"><i class="ri-facebook-fill"></i></a>
-                            <a href="#" class="social-icon twitter"><i class="ri-twitter-fill"></i></a>
-                            <a href="#" class="social-icon instagram"><i class="ri-instagram-fill"></i></a>
-                            <a href="#" class="social-icon youtube"><i class="ri-youtube-fill"></i></a>
-                        </div>
-                    <div class="footer-col">
-                        <h4 class="footer-title"><span class="title-icon"><i class="ri-link"></i></span>Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Contact</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Advertise</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4 class="footer-title"><span class="title-icon"><i class="ri-layout-grid-fill"></i></span>Categories</h4>
-                        <ul class="footer-links">
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Politics</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Business</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Sports</a></li>
-                            <li><a href="#"><i class="ri-arrow-right-s-line"></i> Tech</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col footer-newsletter">
-                        <h4 class="footer-title"><span class="title-icon"><i class="ri-mail-open-line"></i></span>Newsletter</h4>
-                        <p class="newsletter-text">Subscribe to our newsletter</p>
-                        <form class="newsletter-form">
-                            <div class="form-group">
-                                <input type="email" placeholder="Enter your email" required>
-                                <button type="submit"><i class="ri-send-plane-fill"></i></button>
-                            </div>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-top container">
+                <div class="logo-area">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/20210512190118_logo_21.png" class="logo">
+                    </a>
+                    <div class="search-box">
+                        <form>
+                            <input type="text" data-i18n-placeholder="Search ..." placeholder="Search ...">
+                            <button type="submit"><i class="ri-search-line"></i></button>
                         </form>
                     </div>
-            </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <div class="copyright">
-                        <p>&copy; 2025 <a href="#">PTS NEWS</a>. All rights reserved.</p>
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+                <nav class="main-nav">
+                    <div class="nav-inner container">
+                        <ul class="menu">
+                            <li><a href="index.html" data-i18n="Home">Home</a></li>
+                            <li class="has-mega">
+                                <a href="#" data-i18n="Politics">Politics</a>
+                                <div class="mega-menu">
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                        <h3 data-i18n="Election Updates">Election Updates</h3>
+                                        <p data-i18n="Latest election news and insights.">Latest election news and insights.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                        <h3 data-i18n="Government">Government</h3>
+                                        <p data-i18n="Policy decisions and governance.">Policy decisions and governance.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                        <h3 data-i18n="World Politics">World Politics</h3>
+                                        <p data-i18n="International political events.">International political events.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
+                                        <h3 data-i18n="Analysis">Analysis</h3>
+                                        <p data-i18n="Expert opinions and deep dives.">Expert opinions and deep dives.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="has-mega">
+                                <a href="#" data-i18n="Business">Business</a>
+                                <div class="mega-menu">
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                                        <h3 data-i18n="Stock Market">Stock Market</h3>
+                                        <p data-i18n="Daily market trends and analysis.">Daily market trends and analysis.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                                        <h3 data-i18n="Startups">Startups</h3>
+                                        <p data-i18n="New ventures and funding news.">New ventures and funding news.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                                        <h3 data-i18n="Economy">Economy</h3>
+                                        <p data-i18n="Economic indicators and policies.">Economic indicators and policies.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
+                                        <h3 data-i18n="Companies">Companies</h3>
+                                        <p data-i18n="Corporate news and mergers.">Corporate news and mergers.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="has-mega">
+                                <a href="#" data-i18n="Sports">Sports</a>
+                                <div class="mega-menu">
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                                        <h3 data-i18n="Cricket">Cricket</h3>
+                                        <p data-i18n="Matches, scores and player updates.">Matches, scores and player updates.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                                        <h3 data-i18n="Football">Football</h3>
+                                        <p data-i18n="Leagues, transfers and highlights.">Leagues, transfers and highlights.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                                        <h3 data-i18n="Tennis">Tennis</h3>
+                                        <p data-i18n="Grand slams and tournament news.">Grand slams and tournament news.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
+                                        <h3 data-i18n="Olympics">Olympics</h3>
+                                        <p data-i18n="Games updates and athlete stories.">Games updates and athlete stories.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="has-mega">
+                                <a href="#" data-i18n="Science">Science</a>
+                                <div class="mega-menu">
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                                        <h3 data-i18n="Space">Space</h3>
+                                        <p data-i18n="NASA, ISRO and space exploration.">NASA, ISRO and space exploration.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                                        <h3 data-i18n="Research">Research</h3>
+                                        <p data-i18n="Scientific discoveries and studies.">Scientific discoveries and studies.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                                        <h3 data-i18n="Technology">Technology</h3>
+                                        <p data-i18n="Tech innovations and breakthroughs.">Tech innovations and breakthroughs.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
+                                        <h3 data-i18n="Environment">Environment</h3>
+                                        <p data-i18n="Climate change and ecology news.">Climate change and ecology news.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="has-mega">
+                                <a href="#" data-i18n="Tech">Tech</a>
+                                <div class="mega-menu">
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                                        <h3 data-i18n="Artificial Intelligence">Artificial Intelligence</h3>
+                                        <p data-i18n="AI developments and applications.">AI developments and applications.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                                        <h3 data-i18n="Gadgets">Gadgets</h3>
+                                        <p data-i18n="Latest devices and launches.">Latest devices and launches.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                                        <h3 data-i18n="Apps">Apps</h3>
+                                        <p data-i18n="Mobile app news and reviews.">Mobile app news and reviews.</p>
+                                    </div>
+                                    <div class="mega-card">
+                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
+                                        <h3 data-i18n="Software">Software</h3>
+                                        <p data-i18n="Programming and software updates.">Programming and software updates.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-actions">
+                            <a href="#" class="subscribe-btn" data-i18n="Subscribe" data-auto-translate="true">Subscribe</a>
+                            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
+                                <i class="ri-moon-fill"></i>
+                            </button>
+                            <button id="side-nav-button" class="side-nav-button">
+                                <i class="ri-bar-chart-horizontal-line"></i>
+                            </button>
+                        </div>
                     </div>
+                </nav>
             </div>
-    </footer>
+        </header>
+
+        <!-- Breaking News Bar -->
+        <div class="breaking-news-bar">
+            <div class="container">
+                <div class="breaking-label">
+                    <i class="ri-fire-fill"></i> <span data-i18n="Breaking News" data-auto-translate="true">Breaking News</span>
+                </div>
+                <div class="breaking-ticker-wrapper">
+                    <div class="breaking-ticker">
+                        <span data-auto-translate="true">Global climate summit reaches historic agreement on carbon emissions reduction</span>
+                        <span>•</span>
+                        <span data-auto-translate="true">Tech giant announces revolutionary AI-powered healthcare solution</span>
+                        <span>•</span>
+                        <span data-auto-translate="true">International space station celebrates 25 years in orbit</span>
+                        <span>•</span>
+                        <span data-auto-translate="true">Major economic reform package unveiled by leading nations</span>
+                    </div>
+                </div>
+                <div class="date-widget">
+                    <span id="date-display"></span>
+                </div>
+                <div class="language-switcher-inline">
+                    <select id="language-selector">
+                        <option value="en">ENG</option>
+                        <option value="tam">தமிழ்</option>
+                        <option value="hin">हिंदी</option>
+                    </select>
+                </div>
+                <a href="admin-login.html" class="user-icon-btn" title="Admin Login">
+                    <i class="ri-user-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Side Nav Overlay -->
+        <div id="side-nav-overlay" class="side-nav-overlay"></div>
+        
+        <!-- Side Navigation -->
+        <div id="side-nav" class="side-nav">
+            <button id="side-nav-close" class="side-nav-close">
+                <i class="ri-close-line"></i>
+            </button>
+            <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS" class="side-nav-logo">
+            <div class="side-nav-description" data-i18n-html="Stay informed with the latest news and updates from us." data-auto-translate="true">
+                Stay informed with the latest news and updates from us.
+            </div>
+            <ul class="sub-menu" id="sub-menu">
+                <li><a href="index.html" data-i18n="Home" data-auto-translate="true">Home</a></li>
+                <li><a href="#" data-i18n="Politics" data-auto-translate="true">Politics</a></li>
+                <li><a href="#" data-i18n="Business" data-auto-translate="true">Business</a></li>
+                <li><a href="#" data-i18n="Sports" data-auto-translate="true">Sports</a></li>
+                <li><a href="#" data-i18n="Science" data-auto-translate="true">Science</a></li>
+                <li><a href="#" data-i18n="Tech" data-auto-translate="true">Tech</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#" class="social-link facebook"><i class="ri-facebook-fill"></i> <span data-i18n="Facebook" data-auto-translate="true">Facebook</span></a>
+                <a href="#" class="social-link twitter"><i class="ri-twitter-fill"></i> <span data-i18n="Twitter" data-auto-translate="true">Twitter</span></a>
+                <a href="#" class="social-link instagram"><i class="ri-instagram-fill"></i> <span data-i18n="Instagram" data-auto-translate="true">Instagram</span></a>
+                <a href="#" class="social-link youtube"><i class="ri-youtube-fill"></i> <span data-i18n="YouTube" data-auto-translate="true">YouTube</span></a>
+            </div>
+        </div>
+
+        <!-- Article Content Section -->
+<section class="article-content-section">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
+                    <a href="#" id="breadcrumb-category">Category</a>
+                    <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
+                    <span class="current" id="breadcrumb-title">Article</span>
+                </div>
+
+                <!-- Article Not Found -->
+                <div id="article-not-found" class="article-not-found" style="display: none;">
+                    <div class="not-found-content">
+                        <i class="ri-article-line"></i>
+                        <h2>Article Not Found</h2>
+                        <p>The article you're looking for doesn't exist or has been removed.</p>
+                        <a href="index.html" class="back-home-btn">Back to Home</a>
+                    </div>
+                </div>
+
+                <!-- Main Article with Sidebar -->
+                <div id="article-display" class="article-layout" style="display: none;">
+                    <!-- Main Column -->
+                    <div class="article-main-column">
+                        <div class="article-header-new">
+                            <div class="article-category">
+                                <span id="article-category" class="category-tag"></span>
+                            </div>
+                            <h1 id="article-title" class="article-title-new"></h1>
+                            <div class="article-meta-new">
+                                <div class="author-info">
+                                    <div class="author-avatar">
+                                        <img src="assets/images/default-123x83.png" alt="Author">
+                                    </div>
+                                    <div class="author-details">
+                                        <span class="by">By</span>
+                                        <a href="#">PTS News</a>
+                                    </div>
+                                </div>
+                                <div class="post-date">
+                                    <i class="ri-calendar-line"></i>
+                                    <span id="article-date"></span>
+                                </div>
+                                <div class="article-views">
+                                    <i class="ri-eye-line"></i>
+                                    <span id="article-views">0 views</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Full Width Image -->
+                        <div class="article-image-container">
+                            <img id="article-image" src="" alt="">
+                        </div>
+
+                        <!-- Social Share Buttons -->
+                        <div class="article-share">
+                            <span class="share-label">Share:</span>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook" onclick="shareArticle('facebook')"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" class="share-btn twitter" onclick="shareArticle('twitter')"><i class="ri-twitter-x-line"></i></a>
+                                <a href="#" class="share-btn whatsapp" onclick="shareArticle('whatsapp')"><i class="ri-whatsapp-fill"></i></a>
+                                <a href="#" class="share-btn linkedin" onclick="shareArticle('linkedin')"><i class="ri-linkedin-fill"></i></a>
+                                <a href="#" class="share-btn copy-link" onclick="shareArticle('copy')"><i class="ri-link"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Article Content -->
+                        <div class="article-body-new">
+                            <p id="article-summary" class="article-lead"></p>
+                            <div id="article-content" class="article-text-new"></div>
+                        </div>
+
+                        <!-- Author Box -->
+                        <div class="author-box">
+                            <div class="author-box-avatar">
+                                <img src="assets/images/default-123x83.png" alt="Author">
+                            </div>
+                            <div class="author-box-info">
+                                <h4>PTS News</h4>
+                                <p>Your trusted source for the latest news and updates. We deliver accurate, timely, and comprehensive coverage across politics, business, sports, science, and technology.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="article-sidebar">
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title"><span class="title-icon"><i class="ri-links-line"></i></span>Related Articles</h3>
+                            <div class="related-articles-list" id="related-articles"></div>
+                        </div>
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title"><span class="title-icon"><i class="ri-fire-line"></i></span>Trending Now</h3>
+                            <div class="trending-list" id="trending-articles"></div>
+                        </div>
+                        <div class="sidebar-widget newsletter-widget">
+                            <div class="newsletter-box">
+                                <h4>Subscribe to Newsletter</h4>
+                                <p>Get the latest news delivered to your inbox</p>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Enter your email">
+                                    <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-col footer-brand">
+                            <div class="footer-logo"><h3>PTS NEWS</h3></div>
+                            <p class="footer-description">Stay informed with the latest news and updates from around the world.</p>
+                            <div class="footer-social">
+                                <a href="#" class="social-icon facebook"><i class="ri-facebook-fill"></i></a>
+                                <a href="#" class="social-icon twitter"><i class="ri-twitter-fill"></i></a>
+                                <a href="#" class="social-icon instagram"><i class="ri-instagram-fill"></i></a>
+                                <a href="#" class="social-icon youtube"><i class="ri-youtube-fill"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-col">
+                            <h4 class="footer-title"><span class="title-icon"><i class="ri-link"></i></span>Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Contact</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Advertise</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4 class="footer-title"><span class="title-icon"><i class="ri-layout-grid-fill"></i></span>Categories</h4>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Politics</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Business</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Sports</a></li>
+                                <li><a href="#"><i class="ri-arrow-right-s-line"></i> Tech</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col footer-newsletter">
+                            <h4 class="footer-title"><span class="title-icon"><i class="ri-mail-open-line"></i></span>Newsletter</h4>
+                            <p class="newsletter-text">Subscribe to our newsletter</p>
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter your email" required>
+                                    <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-content">
+                        <div class="copyright">
+                            <p>&copy; 2025 <a href="#">PTS NEWS</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js?v=3"></script>
@@ -391,9 +423,31 @@
     <script>
         let currentArticle = null;
         
+        // Demo article for preview purposes
+        const demoArticle = {
+            id: 'demo_001',
+            title: 'Global Climate Summit Reaches Historic Agreement on Carbon Emissions',
+            category: 'Politics - Environment',
+            date: 'January 15, 2025',
+            summary: 'World leaders have come together in a groundbreaking agreement to reduce carbon emissions by 50% by 2030, marking a significant milestone in the fight against climate change.',
+            content: '<p>In a historic moment for climate action, representatives from over 190 countries have signed a landmark agreement to dramatically reduce carbon emissions over the next decade. The agreement, reached after two weeks of intense negotiations at the Global Climate Summit, sets ambitious but necessary targets for nations worldwide.</p><p>The deal includes binding commitments to transition to renewable energy sources, phase out coal-powered plants, and implement carbon pricing mechanisms. Financial support for developing nations to assist in their transition to green energy is also a key component of the agreement.</p><p>"This is a turning point in human history," said the UN Secretary-General at the closing ceremony. "For the first time, we have a truly global commitment to tackle the greatest challenge of our time."</p><p>Environmental activists have cautiously welcomed the agreement, while emphasizing the need for urgent implementation. Critics argue that more aggressive measures are needed to meet the Paris Agreement goals.</p>',
+            image: 'assets/images/20260101075831_big_730x400_30.webp'
+        };
+        
         function loadArticleById() {
             const urlParams = new URLSearchParams(window.location.search);
             const articleId = urlParams.get('id');
+            
+            // For demo purposes, show demo article if no ID provided and no articles in localStorage
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            
+            if (!articleId && articles.length === 0) {
+                // Show demo article to preview UI
+                displayArticle(demoArticle);
+                loadRelatedArticles(demoArticle.category);
+                loadTrendingArticles();
+                return;
+            }
             
             if (!articleId) {
                 showArticleNotFound();
@@ -402,7 +456,6 @@
                 return;
             }
             
-            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             const article = articles.find(a => a.id === articleId);
             
             if (!article) {
@@ -475,9 +528,41 @@
         function loadRelatedArticles(category) {
             const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             const container = document.getElementById('related-articles');
+            
+            // Demo related articles for preview
+            const demoRelatedArticles = [
+                {
+                    id: 'demo_related_1',
+                    title: 'Renewable Energy Investments Reach Record High in 2025',
+                    date: 'January 14, 2025',
+                    image: 'assets/images/20260102081509_medium_358x215_28.webp'
+                },
+                {
+                    id: 'demo_related_2',
+                    title: 'Electric Vehicle Sales Surge as Governments Offer Incentives',
+                    date: 'January 13, 2025',
+                    image: 'assets/images/20260102082019_medium_358x215_42.webp'
+                },
+                {
+                    id: 'demo_related_3',
+                    title: 'New Study Reveals Impact of Ocean Warming on Marine Life',
+                    date: 'January 12, 2025',
+                    image: 'assets/images/20260103082039_medium_358x215_42.webp'
+                },
+                {
+                    id: 'demo_related_4',
+                    title: 'Tech Companies Commit to Carbon Neutrality by 2030',
+                    date: 'January 11, 2025',
+                    image: 'assets/images/20260101080454_small_123x83_24.webp'
+                }
+            ];
+            
             let related = articles.filter(a => a.id !== currentArticle?.id);
             
-            if (category) {
+            if (related.length === 0 && !category) {
+                // Use demo related articles for preview
+                related = demoRelatedArticles;
+            } else if (category) {
                 const mainCat = getMainCategory(category);
                 related = related.sort((a, b) => {
                     const aCat = getMainCategory(a.category);
@@ -504,13 +589,49 @@
                         <h4><a href="article.html?id=${article.id}">${article.title}</a></h4>
                         <span class="related-date">${article.date || ''}</span>
                     </div>
+                </div>
             `).join('');
         }
         
         function loadTrendingArticles() {
             const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             const container = document.getElementById('trending-articles');
-            const trending = [...articles].sort(() => Math.random() - 0.5).slice(0, 5);
+            
+            // Demo trending articles for preview
+            const demoTrendingArticles = [
+                {
+                    id: 'demo_trending_1',
+                    title: 'Stock Market Hits All-Time High Amid Economic Optimism',
+                    category: 'Business',
+                    date: 'January 15, 2025'
+                },
+                {
+                    id: 'demo_trending_2',
+                    title: 'Cricket World Cup: India Announces Squad for Upcoming Tournament',
+                    category: 'Sports',
+                    date: 'January 14, 2025'
+                },
+                {
+                    id: 'demo_trending_3',
+                    title: 'NASA Announces New Mars Mission Timeline',
+                    category: 'Science',
+                    date: 'January 13, 2025'
+                },
+                {
+                    id: 'demo_trending_4',
+                    title: 'Apple Unveils Revolutionary AI Features in Latest iPhone',
+                    category: 'Tech',
+                    date: 'January 12, 2025'
+                },
+                {
+                    id: 'demo_trending_5',
+                    title: 'Major Political Reform Bill Passes Senate Vote',
+                    category: 'Politics',
+                    date: 'January 11, 2025'
+                }
+            ];
+            
+            const trending = articles.length > 0 ? [...articles].sort(() => Math.random() - 0.5).slice(0, 5) : demoTrendingArticles;
             
             if (trending.length === 0) {
                 container.innerHTML = '<p class="no-articles">No trending articles</p>';
@@ -523,8 +644,10 @@
                     <div class="trending-info">
                         <h4><a href="article.html?id=${article.id}">${article.title}</a></h4>
                         <span class="trending-meta">
-                            <span class="trending-cat">${getMainCategory(article.category)}</span>
+                            <span class="trending-cat">${article.category || getMainCategory(article.category)}</span>
+                        </span>
                     </div>
+                </div>
             `).join('');
         }
         
@@ -563,3 +686,4 @@
     </script>
 </body>
 </html>
+

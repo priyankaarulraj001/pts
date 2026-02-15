@@ -43,7 +43,15 @@
         .user-name { font-size: 16px; font-weight: 600; }
         .user-role { font-size: 12px; opacity: 0.8; }
         .logout-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
-        .logout-btn:hover { background: #F21517; border-color: #F21517; }
+.logout-btn:hover { background: #F21517; border-color: #F21517; }
+        .home-btn { display: flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
+.home-btn:hover {
+    background: inherit;
+    border-color: inherit;
+    color: white;
+}
+
+
         .dashboard-content { padding: 40px; max-width: 1400px; margin: 0 auto; }
         .dashboard-title { font-size: 28px; font-weight: 700; color: #001A56; margin-bottom: 30px; }
         .welcome-banner { background: linear-gradient(135deg, #001A56 0%, #002a7a 100%); border-radius: 15px; padding: 30px 40px; margin-bottom: 40px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 10px 30px rgba(0, 26, 86, 0.3); }
@@ -109,7 +117,8 @@
         <div class="dashboard-logo">
             <img src="assets/images/20210512190118_logo_21.png" alt="PTS NEWS">
             <div class="logo-text"><h1>PTS NEWS</h1><span>Admin Panel</span></div>
-        <div class="dashboard-user">
+<div class="dashboard-user">
+            <a href="index.html" class="home-btn" title="Go to Home"><span>Back To Home</span></a>
             <div class="user-info">
                 <div class="user-avatar"><i class="ri-user-line"></i></div>
                 <div class="user-details">
