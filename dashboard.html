@@ -110,6 +110,32 @@
         .image-upload-area i { font-size: 40px; color: #001A56; margin-bottom: 10px; display: block; }
         .image-upload-area p { color: #666; font-size: 14px; margin: 0; }
         .submit-btn { width: 100%; padding: 15px; background: #F21517; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; }
+        
+        /* Manage Articles Section */
+        .manage-articles { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); margin-bottom: 40px; }
+        .articles-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .articles-table th { text-align: left; padding: 15px; background: #f8f9fa; color: #001A56; font-weight: 600; font-size: 14px; border-bottom: 2px solid #e5e5e5; }
+        .articles-table td { padding: 15px; border-bottom: 1px solid #e5e5e5; font-size: 14px; color: #333; vertical-align: middle; }
+        .articles-table tr:hover { background: #f8f9fa; }
+        .articles-table .article-title { font-weight: 600; color: #001A56; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .articles-table .article-category { display: inline-block; padding: 4px 10px; background: rgba(0, 26, 86, 0.1); color: #001A56; border-radius: 20px; font-size: 12px; font-weight: 500; }
+        .articles-table .article-date { color: #666; font-size: 13px; }
+        .delete-btn { background: none; border: none; color: #F21517; cursor: pointer; padding: 8px; border-radius: 6px; transition: all 0.3s ease; }
+        .delete-btn:hover { background: rgba(242, 21, 23, 0.1); }
+        .delete-btn i { font-size: 18px; }
+        .no-articles { text-align: center; padding: 40px; color: #666; }
+        .no-articles i { font-size: 48px; margin-bottom: 15px; display: block; opacity: 0.5; }
+        .confirm-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 10000; align-items: center; justify-content: center; }
+        .confirm-modal-overlay.show { display: flex; }
+        .confirm-modal-content { background: white; border-radius: 15px; padding: 30px; max-width: 400px; width: 90%; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); text-align: center; }
+        .confirm-modal-content h3 { color: #001A56; font-size: 20px; font-weight: 700; margin-bottom: 15px; }
+        .confirm-modal-content p { color: #666; font-size: 14px; margin-bottom: 25px; }
+        .confirm-modal-buttons { display: flex; gap: 15px; justify-content: center; }
+        .confirm-modal-buttons button { padding: 12px 30px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .cancel-delete-btn { background: #f8f9fa; border: 2px solid #e5e5e5; color: #333; }
+        .cancel-delete-btn:hover { background: #e5e5e5; }
+        .confirm-delete-btn { background: #F21517; border: 2px solid #F21517; color: white; }
+        .confirm-delete-btn:hover { background: #d41012; border-color: #d41012; }
     </style>
 </head>
 <body>
@@ -143,23 +169,23 @@
         <div class="stats-grid">
             <div class="stat-card blue">
                 <div class="stat-icon"><i class="ri-article-line"></i></div>
-                <div class="stat-value" id="articleCount">1,234</div>
+                <div class="stat-value" id="articleCount">Loading...</div>
                 <div class="stat-label">Total Articles</div>
             </div>
             <div class="stat-card red">
                 <div class="stat-icon"><i class="ri-eye-line"></i></div>
-                <div class="stat-value">45.2K</div>
+                <div class="stat-value" id="viewCount">Loading...</div>
                 <div class="stat-label">Total Views</div>
                 </div>
             <div class="stat-card green">
                 <div class="stat-icon"><i class="ri-user-follow-line"></i></div>
-                <div class="stat-value">8,547</div>
+                <div class="stat-value" id="subscriberCount">Loading...</div>
                 <div class="stat-label">Subscribers</div>
                 </div>
 
             <div class="stat-card orange">
                 <div class="stat-icon"><i class="ri-message-3-line"></i></div>
-                <div class="stat-value">342</div>
+                <div class="stat-value" id="commentCount">Loading...</div>
                 <div class="stat-label">Comments</div>
         </div>
         </div>
@@ -176,21 +202,36 @@
                 <a href="#" class="action-btn"><i class="ri-bar-chart-line"></i><span>View Analytics</span></a>
                 <a href="#" class="action-btn"><i class="ri-mail-send-line"></i><span>Send Newsletter</span></a>
             </div>
+        </div>
+
+        <div class="manage-articles">
+            <h2 class="section-title"><i class="ri-article-line"></i> Manage Articles</h2>
+            <div id="articlesTableContainer">
+                <table class="articles-table" id="articlesTable">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="articlesList">
+                        <!-- Articles will be loaded here dynamically -->
+                    </tbody>
+                </table>
+                <div class="no-articles" id="noArticles" style="display: none;">
+                    <i class="ri-article-line"></i>
+                    <p>No articles found. Click "Add New Article" to create one.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="recent-activity">
             <h2 class="section-title"><i class="ri-time-line"></i> Recent Activity</h2>
             <div class="activity-list" id="activityList">
-                <div class="activity-item">
-                    <div class="activity-icon blue"><i class="ri-edit-line"></i></div>
-                    <div class="activity-content">
-                        <div class="activity-title">Article "Climate Summit Updates" was published</div>
-                        <div class="activity-time">2 minutes ago</div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon green"><i class="ri-user-add-line"></i></div>
-                    <div class="activity-content">
-                        <div class="activity-title">New subscriber: john.doe@email.com</div>
-                        <div class="activity-time">15 minutes ago</div>
-                </div>
+                <!-- Activity items will be loaded dynamically from localStorage -->
+            </div>
         </div>
     </main>
     <div class="modal-overlay" id="articleModal">
@@ -249,12 +290,28 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Article Title</label>
-                    <input type="text" id="articleTitle" placeholder="Enter article title" required>
+                    <label>Article Title (English) *</label>
+                    <input type="text" id="articleTitle" placeholder="Enter article title in English" required>
                 </div>
                 <div class="form-group">
-                    <label>Content</label>
-                    <textarea id="articleContent" placeholder="Enter article content" rows="4" required></textarea>
+                    <label>Article Title (Tamil)</label>
+                    <input type="text" id="articleTitleTamil" placeholder="Enter article title in Tamil (தமிழ்)">
+                </div>
+                <div class="form-group">
+                    <label>Article Title (Hindi)</label>
+                    <input type="text" id="articleTitleHindi" placeholder="Enter article title in Hindi (हिंदी)">
+                </div>
+                <div class="form-group">
+                    <label>Content (English) *</label>
+                    <textarea id="articleContent" placeholder="Enter article content in English" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Content (Tamil)</label>
+                    <textarea id="articleContentTamil" placeholder="Enter article content in Tamil (தமிழ்)" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Content (Hindi)</label>
+                    <textarea id="articleContentHindi" placeholder="Enter article content in Hindi (हिंदी)" rows="4"></textarea>
                 </div>
                 <div class="form-group">
                     <label>Featured Image</label>
@@ -267,12 +324,72 @@
             </form>
         </div>
         </div>
+    
+    <!-- Delete Confirmation Modal -->
+    <div class="confirm-modal-overlay" id="deleteConfirmModal">
+        <div class="confirm-modal-content">
+            <h3>Delete Article</h3>
+            <p>Are you sure you want to delete "<span id="deleteArticleTitle"></span>"? This action cannot be undone.</p>
+            <div class="confirm-modal-buttons">
+                <button class="cancel-delete-btn" id="cancelDeleteBtn">Cancel</button>
+                <button class="confirm-delete-btn" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+    
     <script>
+        // Function to format numbers (e.g., 1200 -> 1,200 or 45000 -> 45K)
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toLocaleString();
+        }
+
+        // Function to fetch dashboard stats from API
+        async function fetchDashboardStats() {
+            try {
+                const response = await fetch('api/dashboard-stats.php');
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Update all stat values
+                    document.getElementById('articleCount').textContent = formatNumber(result.data.articles);
+                    document.getElementById('viewCount').textContent = formatNumber(result.data.views);
+                    document.getElementById('subscriberCount').textContent = formatNumber(result.data.subscribers);
+                    document.getElementById('commentCount').textContent = formatNumber(result.data.comments);
+                } else {
+                    // Show error state
+                    console.error('Failed to fetch stats:', result.message);
+                    document.getElementById('articleCount').textContent = '--';
+                    document.getElementById('viewCount').textContent = '--';
+                    document.getElementById('subscriberCount').textContent = '--';
+                    document.getElementById('commentCount').textContent = '--';
+                }
+            } catch (error) {
+                console.error('Error fetching dashboard stats:', error);
+                // Fallback to localStorage if API fails
+                loadLocalStorageStats();
+            }
+        }
+
+        // Fallback function using localStorage
+        function loadLocalStorageStats() {
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            document.getElementById('articleCount').textContent = articles.length > 0 ? articles.length.toLocaleString() : '0';
+            document.getElementById('viewCount').textContent = '0';
+            document.getElementById('subscriberCount').textContent = '0';
+            document.getElementById('commentCount').textContent = '0';
+        }
+
         function checkAuth() { if (!localStorage.getItem('adminAuth')) { window.location.href = 'admin-login.html'; return false; } return true; }
         function getAdminName() { return localStorage.getItem('adminUser') || 'Admin'; }
         if (checkAuth()) { 
             document.getElementById('adminName').textContent = getAdminName(); 
             document.getElementById('welcomeName').textContent = getAdminName(); 
+            
             function updateDateTime() { 
                 const now = new Date(); 
                 document.getElementById('currentDate').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }); 
@@ -280,8 +397,9 @@
             } 
             updateDateTime(); 
             setInterval(updateDateTime, 1000); 
-            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]'); 
-            document.getElementById('articleCount').textContent = (1234 + articles.length).toLocaleString(); 
+            
+            // Fetch real stats from database
+            fetchDashboardStats();
         }
         document.getElementById('logoutBtn').addEventListener('click', function(e) { 
             e.preventDefault(); 
@@ -320,34 +438,188 @@
         
         document.getElementById('articleForm').addEventListener('submit', function(e) { 
             e.preventDefault(); 
+            
             const category = document.getElementById('articleCategory').value; 
             const title = document.getElementById('articleTitle').value; 
+            const titleTamil = document.getElementById('articleTitleTamil').value; 
+            const titleHindi = document.getElementById('articleTitleHindi').value; 
             const content = document.getElementById('articleContent').value; 
-            if (!category || !title || !content) { alert('Please fill all fields!'); return; } 
+            const contentTamil = document.getElementById('articleContentTamil').value; 
+            const contentHindi = document.getElementById('articleContentHindi').value; 
             
-            // Only include image if user actually uploaded one
+            if (!category || !title || !content) { alert('Please fill all required fields!'); return; } 
+            
+            // Create article object with all translations
             const article = { 
                 id: Date.now(), 
                 category: category, 
                 title: title, 
+                title_tamil: titleTamil || '', 
+                title_hindi: titleHindi || '', 
                 content: content, 
+                content_tamil: contentTamil || '', 
+                content_hindi: contentHindi || '', 
                 date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }), 
                 image: uploadedImageData || null  // Use uploaded image or null if no image
             };
+            
             let articles = JSON.parse(localStorage.getItem('adminArticles') || '[]'); 
             articles.unshift(article); 
-            localStorage.setItem('adminArticles', JSON.stringify(articles)); 
+localStorage.setItem('adminArticles', JSON.stringify(articles)); 
             document.getElementById('articleCount').textContent = (1234 + articles.length).toLocaleString(); 
-            const activityList = document.getElementById('activityList'); 
-            const newActivity = document.createElement('div'); 
-            newActivity.className = 'activity-item'; 
-            newActivity.innerHTML = '<div class="activity-icon blue"><i class="ri-edit-line"></i></div><div class="activity-content"><div class="activity-title">Article "' + title + '" was published</div><div class="activity-time">Just now</div>'; 
-            activityList.insertBefore(newActivity, activityList.firstChild); 
-            alert('Article uploaded successfully!'); 
+            
+            // Add activity and reload
+            addActivity('Article "' + title + '" was published', 'create');
+            loadActivities();
+            
+            alert('Article uploaded successfully!');
             modal.classList.remove('show'); 
             document.getElementById('articleForm').reset(); 
             imageUploadArea.innerHTML = '<i class="ri-image-add-line"></i><p>Click to upload image</p>'; 
+            
+            // Reload the articles list
+            loadArticlesForManagement();
         });
+
+        // Load activities from localStorage and display them
+        function loadActivities() {
+            const activities = JSON.parse(localStorage.getItem('adminActivities') || '[]');
+            const activityList = document.getElementById('activityList');
+            
+            if (activities.length === 0) {
+                activityList.innerHTML = '<div class="activity-item"><div class="activity-content"><div class="activity-title">No recent activity</div><div class="activity-time">Start by adding a new article</div></div></div>';
+                return;
+            }
+            
+            activityList.innerHTML = '';
+            
+            activities.forEach(activity => {
+                const iconClass = activity.type === 'delete' ? 'red' : 'blue';
+                const icon = activity.type === 'delete' ? 'ri-delete-bin-line' : 'ri-edit-line';
+                
+                const activityItem = document.createElement('div');
+                activityItem.className = 'activity-item';
+                activityItem.innerHTML = `
+                    <div class="activity-icon ${iconClass}"><i class="${icon}"></i></div>
+                    <div class="activity-content">
+                        <div class="activity-title">${activity.title}</div>
+                        <div class="activity-time">${activity.time}</div>
+                    </div>
+                `;
+                activityList.appendChild(activityItem);
+            });
+        }
+
+        // Add activity to localStorage
+        function addActivity(title, type) {
+            let activities = JSON.parse(localStorage.getItem('adminActivities') || '[]');
+            
+            const newActivity = {
+                title: title,
+                time: 'Just now',
+                type: type || 'create'
+            };
+            
+            activities.unshift(newActivity);
+            
+            // Keep only the last 10 activities
+            if (activities.length > 10) {
+                activities = activities.slice(0, 10);
+            }
+            
+            localStorage.setItem('adminActivities', JSON.stringify(activities));
+        }
+
+        // Variables for delete functionality
+        
+        // Load articles into the Manage Articles section
+        function loadArticlesForManagement() {
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            const articlesList = document.getElementById('articlesList');
+            const noArticles = document.getElementById('noArticles');
+            const articlesTable = document.getElementById('articlesTable');
+            
+            if (articles.length === 0) {
+                articlesTable.style.display = 'none';
+                noArticles.style.display = 'block';
+                return;
+            }
+            
+            articlesTable.style.display = 'table';
+            noArticles.style.display = 'none';
+            
+            // Sort articles by date (newest first)
+            const sortedArticles = [...articles].sort((a, b) => {
+                return new Date(b.date) - new Date(a.date);
+            });
+            
+            articlesList.innerHTML = '';
+            
+            sortedArticles.forEach(article => {
+                const row = document.createElement('tr');
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-btn';
+                deleteBtn.title = 'Delete Article';
+                deleteBtn.innerHTML = '<i class="ri-delete-bin-line"></i>';
+                deleteBtn.dataset.id = article.id;
+                deleteBtn.dataset.title = article.title;
+                deleteBtn.addEventListener('click', function() {
+                    showDeleteConfirmation(this.dataset.id, this.dataset.title);
+                });
+                
+                const actionCell = document.createElement('td');
+                actionCell.appendChild(deleteBtn);
+                
+                row.innerHTML = `
+                    <td class="article-title" title="${article.title}">${article.title}</td>
+                    <td><span class="article-category">${article.category}</span></td>
+                    <td class="article-date">${article.date || 'N/A'}</td>
+                `;
+                row.appendChild(actionCell);
+                articlesList.appendChild(row);
+            });
+        }
+        
+// Show delete confirmation and delete if confirmed
+        function showDeleteConfirmation(articleId, articleTitle) {
+            if (confirm('Are you sure you want to delete "' + articleTitle + '"? This action cannot be undone.')) {
+                deleteArticle(articleId);
+            }
+        }
+        
+        // Delete article function
+        function deleteArticle(articleId) {
+            let articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+
+            // Find the article - handle both string and number comparisons
+            const deletedArticle = articles.find(a => String(a.id) === String(articleId));
+
+            // Filter out the article to delete - handle both string and number
+            articles = articles.filter(a => String(a.id) !== String(articleId));
+            
+            // Save back to localStorage
+            localStorage.setItem('adminArticles', JSON.stringify(articles));
+            
+            // Reload the articles list
+            loadArticlesForManagement();
+            
+            // Update article count in stats
+            fetchDashboardStats();
+
+            // Add activity log entry
+            if (deletedArticle) {
+                addActivity('Article "' + deletedArticle.title + '" was deleted', 'delete');
+                loadActivities();
+            }
+
+            alert('Article deleted successfully!');
+        }
+
+        // Load articles and activities when page loads
+        if (checkAuth()) {
+            loadArticlesForManagement();
+            loadActivities();
+        }
     </script>
 </body>
 </html>

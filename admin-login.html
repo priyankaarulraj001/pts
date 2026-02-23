@@ -13,6 +13,18 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .ri-eye-line:before {
+    content: "\ecb5";
+    position: absolute !important;
+    right: 0 !important;
+    top: -11px !important;
+}
+.ri-eye-off-line:before {
+    content: "\ecb7";
+    right: 0 !important;
+    position: absolute !important;
+    top: -11px !important;
+}
 
         body {
             font-family: 'Manrope', sans-serif;
@@ -51,12 +63,14 @@
             text-align: center;
         }
 
-        .login-logo {
-            width: 80px;
-            height: auto;
-            margin-bottom: 20px;
-            animation: pulse 2s ease-in-out infinite;
-        }
+       .login-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+    float: none;
+    margin: 0 auto 20px auto;
+}
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
@@ -123,6 +137,22 @@
 
         .form-group input:focus + i,
         .input-wrapper:focus-within i {
+            color: #001A56;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 10;
+        }
+
+        .password-toggle:hover {
             color: #001A56;
         }
 
@@ -366,6 +396,7 @@
                     <div class="input-wrapper">
                         <input type="password" id="password" name="password" placeholder="Enter your password" required>
                         <i class="ri-lock-line"></i>
+                        <i class="ri-eye-line password-toggle" id="passwordToggle"></i>
                     </div>
                 </div>
                 
@@ -374,7 +405,7 @@
                         <input type="checkbox" id="remember" name="remember">
                         <label for="remember">Remember me</label>
                     </div>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <a href="#" class="forgot-password" id="forgotPassword">Forgot password?</a>
                 </div>
                 
                 <button type="submit" class="login-btn">Login</button>
@@ -390,10 +421,10 @@
         
 <div class="login-footer">
             <p>&copy; 2025 PTS NEWS. All rights reserved.</p>
-            <div class="demo-credentials" style="margin-top: 15px; padding: 10px; background: #f0f9ff; border-radius: 8px; border: 1px solid #bae6fd;">
+            <!-- <div class="demo-credentials" style="margin-top: 15px; padding: 10px; background: #f0f9ff; border-radius: 8px; border: 1px solid #bae6fd;">
                 <p style="color: #0369a1; font-size: 12px; font-weight: 600; margin-bottom: 5px;">Demo Credentials:</p>
                 <p style="color: #075985; font-size: 11px; margin: 0;">Username: <strong>admin</strong> | Password: <strong>admin123</strong></p>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -445,6 +476,30 @@
         
         document.getElementById('password').addEventListener('input', function() {
             document.getElementById('errorMessage').classList.remove('show');
+        });
+
+        // Password toggle functionality
+        const passwordToggle = document.getElementById('passwordToggle');
+        const passwordInput = document.getElementById('password');
+        
+        passwordToggle.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Toggle icon between eye and eye-off
+            if (type === 'text') {
+                passwordToggle.classList.remove('ri-eye-line');
+                passwordToggle.classList.add('ri-eye-off-line');
+            } else {
+                passwordToggle.classList.remove('ri-eye-off-line');
+                passwordToggle.classList.add('ri-eye-line');
+            }
+        });
+
+        // Forgot password handler
+        document.getElementById('forgotPassword').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'forgot-password.html';
         });
         
         // Check if already logged in

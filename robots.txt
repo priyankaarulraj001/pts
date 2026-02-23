@@ -1,0 +1,17 @@
+# Robots.txt for PTS News Portal
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+Disallow: /admin*/
+Disallow: /api/
+Disallow: /includes/
+Disallow: /cache/
+Disallow: /logs/
+
+# Sitemap
+Sitemap: https://ptsnews.in/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+

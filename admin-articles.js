@@ -91,10 +91,24 @@ function loadAdminArticles() {
         articles.forEach(article => {
             const mainCategory = getMainCategory(article.category);
             
+            // Get current language to display appropriate title
+            const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+            let articleTitle = article.title || '';
+            let articleSummary = article.summary || '';
+            
+            // Use translated content based on language
+            if (currentLang === 'tam' && article.title_tamil) {
+                articleTitle = article.title_tamil;
+                articleSummary = article.summary_tamil || '';
+            } else if (currentLang === 'hin' && article.title_hindi) {
+                articleTitle = article.title_hindi;
+                articleSummary = article.summary_hindi || '';
+            }
+            
             // Only display image if user entered data with image
             const imageHtml = isValidImage(article.image) ? `
                 <div class="trending-image">
-                    <img src="${article.image}" alt="${article.title}">
+                    <img src="${article.image}" alt="${articleTitle}">
                     <span class="category-tag">${mainCategory}</span>
                 </div>
             ` : `
@@ -110,11 +124,12 @@ function loadAdminArticles() {
                     ${imageHtml}
                     <div class="trending-content">
                         <h3 class="trending-card-title">
-                            <a href="article.html?id=${article.id}">${article.title}</a>
+                            <a href="article.html?id=${article.id}" data-i18n="" data-auto-translate="true">${articleTitle}</a>
                         </h3>
-                        <p class="trending-excerpt">${article.summary || ''}</p>
+                        <p class="trending-excerpt" data-i18n="" data-auto-translate="true">${articleSummary || ''}</p>
                         <div class="trending-meta">
                             <span class="trending-date">${article.date || ''}</span>
+                            <a href="article.html?id=${article.id}" class="read-more-link" data-i18n="Read More" data-auto-translate="true">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -133,6 +148,9 @@ function loadAdminArticlesToMegaMenu() {
         return; // No articles to display
     }
     
+    // Get current language
+    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+    
     // Group articles by main category
     const articlesByCategory = {};
     
@@ -140,10 +158,29 @@ function loadAdminArticlesToMegaMenu() {
         const mainCategory = getMainCategory(article.category);
         const categoryKey = getCategoryKey(mainCategory);
         
+        // Get translated title based on language
+        let displayTitle = article.title || '';
+        let displaySummary = article.summary || '';
+        
+        if (currentLang === 'tam' && article.title_tamil) {
+            displayTitle = article.title_tamil;
+            displaySummary = article.summary_tamil || '';
+        } else if (currentLang === 'hin' && article.title_hindi) {
+            displayTitle = article.title_hindi;
+            displaySummary = article.summary_hindi || '';
+        }
+        
+        // Store article with display text
+        const articleWithDisplay = {
+            ...article,
+            display_title: displayTitle,
+            display_summary: displaySummary
+        };
+        
         if (!articlesByCategory[categoryKey]) {
             articlesByCategory[categoryKey] = [];
         }
-        articlesByCategory[categoryKey].push(article);
+        articlesByCategory[categoryKey].push(articleWithDisplay);
     });
     
     // Define category mapping - maps category key to the mega menu element
@@ -180,21 +217,25 @@ function createMegaMenuArticleCard(article) {
     const card = document.createElement('div');
     card.className = 'mega-card';
     
+    // Use display_title if available (from language-aware processing), otherwise fallback to original
+    const title = article.display_title || article.title || '';
+    const summary = article.display_summary || article.summary || '';
+    
     // Only show image if user actually uploaded one
     if (isValidImage(article.image)) {
         card.innerHTML = `
             <a href="article.html?id=${article.id}">
-                <img class="category-image" src="${article.image}" alt="${article.title}">
-                <h3 data-i18n="">${article.title}</h3>
-                <p data-i18n="">${article.summary || ''}</p>
+                <img class="category-image" src="${article.image}" alt="${title}">
+                <h3 data-i18n="">${title}</h3>
+                <p data-i18n="">${summary}</p>
             </a>
         `;
     } else {
         // No image - show text only card
         card.innerHTML = `
             <a href="article.html?id=${article.id}">
-                <h3 data-i18n="" style="margin-top: 0;">${article.title}</h3>
-                <p data-i18n="">${article.summary || ''}</p>
+                <h3 data-i18n="" style="margin-top: 0;">${title}</h3>
+                <p data-i18n="">${summary}</p>
             </a>
         `;
     }
@@ -202,9 +243,59 @@ function createMegaMenuArticleCard(article) {
     return card;
 }
 
-// Initialize on DOM ready
+// Function to reload articles when language changes
+function reloadArticlesForLanguage() {
+    // Clear existing articles from DOM
+    const trendingWrapper = document.querySelector('.trending-slider .swiper-wrapper');
+    if (trendingWrapper) {
+        // Remove dynamically added slides (keep original ones)
+        const existingSlides = trendingWrapper.querySelectorAll('.swiper-slide');
+        existingSlides.forEach(slide => {
+            // Check if it was added by admin-articles.js (has article with id)
+            const articleLink = slide.querySelector('a[href^="article.html?id="]');
+            if (articleLink) {
+                slide.remove();
+            }
+        });
+    }
+    
+    // Clear mega menu articles
+    const categoryMegaMenus = {
+        'politics': document.querySelector('.menu > li:has(a[data-i18n="Politics"]) .mega-menu'),
+        'business': document.querySelector('.menu > li:has(a[data-i18n="Business"]) .mega-menu'),
+        'sports': document.querySelector('.menu > li:has(a[data-i18n="Sports"]) .mega-menu'),
+        'science': document.querySelector('.menu > li:has(a[data-i18n="Science"]) .mega-menu'),
+        'tech': document.querySelector('.menu > li:has(a[data-i18n="Tech"]) .mega-menu')
+    };
+    
+    Object.values(categoryMegaMenus).forEach(megaMenu => {
+        if (megaMenu) {
+            const cards = megaMenu.querySelectorAll('.mega-card');
+            cards.forEach(card => {
+                const link = card.querySelector('a[href^="article.html?id="]');
+                if (link) {
+                    card.remove();
+                }
+            });
+        }
+    });
+    
+    // Reload articles with new language
+    loadAdminArticles();
+    loadAdminArticlesToMegaMenu();
+}
+
+// Listen for language changes and reload articles
 document.addEventListener('DOMContentLoaded', function() {
     loadAdminArticles();
     loadAdminArticlesToMegaMenu();
+    
+    // Override changeLanguage to reload articles after language change
+    const originalChangeLanguage = window.changeLanguage;
+    window.changeLanguage = async function(lang) {
+        await originalChangeLanguage(lang);
+        // Reload articles with new language
+        reloadArticlesForLanguage();
+    };
 });
 

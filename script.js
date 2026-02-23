@@ -2252,3 +2252,109 @@ function updateHoroscopeCard(card, data) {
 }
 
 console.log('Horoscope functionality initialized successfully');
+
+// ============================================
+// NEWSLETTER SUBSCRIPTION FUNCTIONALITY
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    initNewsletterSubscription();
+});
+
+function initNewsletterSubscription() {
+    // Find all newsletter forms on the page
+    const newsletterForms = document.querySelectorAll('.newsletter-form, form.newsletter-form');
+    
+    newsletterForms.forEach(form => {
+        // Remove default action
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Find the email input in this form
+            const emailInput = form.querySelector('input[type="email"]');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            if (!emailInput || !emailInput.value) {
+                showNewsletterMessage(form, 'Please enter your email address.', 'error');
+                return;
+            }
+            
+            const email = emailInput.value.trim();
+            
+            // Show loading state
+            if (submitBtn) {
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Subscribing...';
+                submitBtn.disabled = true;
+                
+                try {
+                    const response = await fetch('api/subscribe.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email: email })
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        showNewsletterMessage(form, result.message || 'Successfully subscribed!', 'success');
+                        emailInput.value = '';
+                    } else {
+                        showNewsletterMessage(form, result.error || result.message || 'Subscription failed.', 'error');
+                    }
+                } catch (error) {
+                    console.error('Newsletter subscription error:', error);
+                    showNewsletterMessage(form, 'An error occurred. Please try again.', 'error');
+                }
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    });
+}
+
+function showNewsletterMessage(form, message, type) {
+    // Remove existing message if any
+    const existingMsg = form.querySelector('.newsletter-message');
+    if (existingMsg) {
+        existingMsg.remove();
+    }
+    
+    // Create message element
+    const msgEl = document.createElement('div');
+    msgEl.className = 'newsletter-message';
+    msgEl.style.cssText = `
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 500;
+    `;
+    
+    if (type === 'success') {
+        msgEl.style.background = '#d4edda';
+        msgEl.style.color = '#155724';
+        msgEl.style.border = '1px solid #c3e6cb';
+        msgEl.innerHTML = '<i class="ri-check-double-line"></i> ' + message;
+    } else {
+        msgEl.style.background = '#f8d7da';
+        msgEl.style.color = '#721c24';
+        msgEl.style.border = '1px solid #f5c6cb';
+        msgEl.innerHTML = '<i class="ri-error-warning-line"></i> ' + message;
+    }
+    
+    // Insert message after the form
+    form.appendChild(msgEl);
+    
+    // Auto-remove message after 5 seconds
+    setTimeout(() => {
+        msgEl.remove();
+    }, 5000);
+}
+
+// Make function globally available
+window.initNewsletterSubscription = initNewsletterSubscription;

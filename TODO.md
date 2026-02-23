@@ -1,30 +1,33 @@
-# TODO: Article Page Implementation
+# TODO: Add Category Navigation from index.html to article.html
 
-## Task
-When clicking on any link in index.html, it should open article.html with detailed description of that topic. Header and footer should be the same as index page.
+## Task Overview
+Add separate category IDs to topic links in index.html so users can navigate to their respective sections in article.html
 
-## Steps:
-1. [x] Update article.html - Add header from index.html
-2. [x] Update article.html - Add footer from index.html  
-3. [x] Update article.html - Add article content section
-4. [x] Update script.js - Add function to load article by ID from localStorage
-5. [x] Update admin-articles.js - Generate unique IDs and link to article pages
+## Steps to Complete:
 
-## Implementation Complete!
+### Step 1: Update index.html Topic Links
+- [x] Add category query parameters to main navigation topic links
+- [x] Add category query parameters to side navigation topic links
 
-### How it works:
-1. **Article Storage**: Articles are stored in localStorage with unique IDs
-2. **Link Format**: Each article link uses `article.html?id={article_id}`
-3. **article.html**: Displays article details (title, category, date, image, summary/content)
-4. **Header/Footer**: Same as index.html for consistent look
+### Step 2: Update article.html
+- [x] Add category sections with unique IDs at the bottom of article.html
+- [x] Add JavaScript to handle category parameter from URL
+- [x] Make category sections hidden by default and show only when navigated
 
-### Files Modified:
-- **article.html** - Complete redesign with header, footer, and article display section
-- **style.css** - Added article detail page styles
-- **admin-articles.js** - Added ID generation and linking functionality
+### Step 3: Add CSS Styles
+- [x] Add CSS styles for category sections in style.css
 
-### Usage:
-- Add articles via admin dashboard (stored in localStorage)
-- Articles appear in Trending section and Mega Menus with links
-- Clicking an article opens article.html with full details
+### Files Edited:
+1. `/Users/priyanka/Website/PTS/index.html`
+2. `/Users/priyanka/Website/PTS/article.html`
+3. `/Users/priyanka/Website/PTS/style.css`
+
+## Implementation Details:
+- Politics → article.html?category=politics (section id: #politics-section)
+- Business → article.html?category=business (section id: #business-section)
+- Sports → article.html?category=sports (section id: #sports-section)
+- Science → article.html?category=science (section id: #science-section)
+- Tech → article.html?category=tech (section id: #tech-section)
+
+## STATUS: COMPLETED ✅
 

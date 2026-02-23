@@ -10,6 +10,45 @@ if (!isLoggedIn()) {
 $adminName = $_SESSION['admin_full_name'] ?? $_SESSION['admin_username'] ?? 'Admin';
 $adminRole = $_SESSION['admin_role'] ?? 'admin';
 
+// Get dashboard statistics from database
+$stats = [
+    'articles' => 0,
+    'views' => 0,
+    'subscribers' => 0,
+    'comments' => 0
+];
+
+try {
+    // Total Articles
+    $stmt = $pdo->query("SELECT COUNT(*) as count FROM articles WHERE status = 'published'");
+    $stats['articles'] = (int)$stmt->fetch()['count'];
+    
+    // Total Views
+    $stmt = $pdo->query("SELECT COALESCE(SUM(view_count), 0) as total FROM articles WHERE status = 'published'");
+    $stats['views'] = (int)$stmt->fetch()['total'];
+    
+    // Total Subscribers
+    $stmt = $pdo->query("SELECT COUNT(*) as count FROM subscribers WHERE status = 'active'");
+    $stats['subscribers'] = (int)$stmt->fetch()['count'];
+    
+    // Total Comments
+    $stmt = $pdo->query("SELECT COUNT(*) as count FROM comments WHERE status = 'approved'");
+    $stats['comments'] = (int)$stmt->fetch()['count'];
+} catch (PDOException $e) {
+    // Keep default values if database error
+    error_log("Dashboard stats error: " . $e->getMessage());
+}
+
+// Format numbers for display
+function formatStats($num) {
+    if ($num >= 1000000) {
+        return number_format($num / 1000000, 1) . 'M';
+    } elseif ($num >= 1000) {
+        return number_format($num / 1000, 1) . 'K';
+    }
+    return number_format($num);
+}
+
 // Handle logout
 if (isset($_GET['logout'])) {
     // Destroy session
@@ -209,20 +248,24 @@ if (isset($_GET['logout'])) {
         <div class="stats-grid">
             <div class="stat-card blue">
                 <div class="stat-icon"><i class="ri-article-line"></i></div>
-                <div class="stat-value">1,234</div>
+                <div class="stat-value"><?php echo formatStats($stats['articles']); ?></div>
                 <div class="stat-label">Total Articles</div>
+            </div>
             <div class="stat-card red">
                 <div class="stat-icon"><i class="ri-eye-line"></i></div>
-                <div class="stat-value">45.2K</div>
+                <div class="stat-value"><?php echo formatStats($stats['views']); ?></div>
                 <div class="stat-label">Total Views</div>
+            </div>
             <div class="stat-card green">
                 <div class="stat-icon"><i class="ri-user-follow-line"></i></div>
-                <div class="stat-value">8,547</div>
+                <div class="stat-value"><?php echo formatStats($stats['subscribers']); ?></div>
                 <div class="stat-label">Subscribers</div>
+            </div>
             <div class="stat-card orange">
                 <div class="stat-icon"><i class="ri-message-3-line"></i></div>
-                <div class="stat-value">342</div>
+                <div class="stat-value"><?php echo formatStats($stats['comments']); ?></div>
                 <div class="stat-label">Comments</div>
+            </div>
         </div>
         
         <div class="quick-actions">

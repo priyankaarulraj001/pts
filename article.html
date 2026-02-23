@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+<style>
+ 
+</style>
+
 </head>
 <body>
     <!-- Preloader -->
@@ -47,127 +51,32 @@
                             <li><a href="index.html" data-i18n="Home">Home</a></li>
                             <li class="has-mega">
                                 <a href="#" data-i18n="Politics">Politics</a>
-                                <div class="mega-menu">
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                                        <h3 data-i18n="Election Updates">Election Updates</h3>
-                                        <p data-i18n="Latest election news and insights.">Latest election news and insights.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                                        <h3 data-i18n="Government">Government</h3>
-                                        <p data-i18n="Policy decisions and governance.">Policy decisions and governance.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                                        <h3 data-i18n="World Politics">World Politics</h3>
-                                        <p data-i18n="International political events.">International political events.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20250621205021_medium_358x215_22.webp" alt="News Image">
-                                        <h3 data-i18n="Analysis">Analysis</h3>
-                                        <p data-i18n="Expert opinions and deep dives.">Expert opinions and deep dives.</p>
-                                    </div>
+                                <div class="mega-menu" id="mega-menu-politics">
+                                    <!-- Loaded dynamically from API -->
                                 </div>
                             </li>
                             <li class="has-mega">
                                 <a href="#" data-i18n="Business">Business</a>
-                                <div class="mega-menu">
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                                        <h3 data-i18n="Stock Market">Stock Market</h3>
-                                        <p data-i18n="Daily market trends and analysis.">Daily market trends and analysis.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                                        <h3 data-i18n="Startups">Startups</h3>
-                                        <p data-i18n="New ventures and funding news.">New ventures and funding news.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                                        <h3 data-i18n="Economy">Economy</h3>
-                                        <p data-i18n="Economic indicators and policies.">Economic indicators and policies.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260103082456_medium_358x215_40.webp" alt="News Image">
-                                        <h3 data-i18n="Companies">Companies</h3>
-                                        <p data-i18n="Corporate news and mergers.">Corporate news and mergers.</p>
-                                    </div>
+                                <div class="mega-menu" id="mega-menu-business">
+                                    <!-- Loaded dynamically from API -->
                                 </div>
                             </li>
                             <li class="has-mega">
                                 <a href="#" data-i18n="Sports">Sports</a>
-                                <div class="mega-menu">
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                                        <h3 data-i18n="Cricket">Cricket</h3>
-                                        <p data-i18n="Matches, scores and player updates.">Matches, scores and player updates.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                                        <h3 data-i18n="Football">Football</h3>
-                                        <p data-i18n="Leagues, transfers and highlights.">Leagues, transfers and highlights.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                                        <h3 data-i18n="Tennis">Tennis</h3>
-                                        <p data-i18n="Grand slams and tournament news.">Grand slams and tournament news.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102081233_medium_358x215_14.webp" alt="News Image">
-                                        <h3 data-i18n="Olympics">Olympics</h3>
-                                        <p data-i18n="Games updates and athlete stories.">Games updates and athlete stories.</p>
-                                    </div>
+                                <div class="mega-menu" id="mega-menu-sports">
+                                    <!-- Loaded dynamically from API -->
                                 </div>
                             </li>
                             <li class="has-mega">
                                 <a href="#" data-i18n="Science">Science</a>
-                                <div class="mega-menu">
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                                        <h3 data-i18n="Space">Space</h3>
-                                        <p data-i18n="NASA, ISRO and space exploration.">NASA, ISRO and space exploration.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                                        <h3 data-i18n="Research">Research</h3>
-                                        <p data-i18n="Scientific discoveries and studies.">Scientific discoveries and studies.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                                        <h3 data-i18n="Technology">Technology</h3>
-                                        <p data-i18n="Tech innovations and breakthroughs.">Tech innovations and breakthroughs.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260102082019_medium_358x215_42.webp" alt="News Image">
-                                        <h3 data-i18n="Environment">Environment</h3>
-                                        <p data-i18n="Climate change and ecology news.">Climate change and ecology news.</p>
-                                    </div>
+                                <div class="mega-menu" id="mega-menu-science">
+                                    <!-- Loaded dynamically from API -->
                                 </div>
                             </li>
                             <li class="has-mega">
                                 <a href="#" data-i18n="Tech">Tech</a>
-                                <div class="mega-menu">
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                                        <h3 data-i18n="Artificial Intelligence">Artificial Intelligence</h3>
-                                        <p data-i18n="AI developments and applications.">AI developments and applications.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                                        <h3 data-i18n="Gadgets">Gadgets</h3>
-                                        <p data-i18n="Latest devices and launches.">Latest devices and launches.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                                        <h3 data-i18n="Apps">Apps</h3>
-                                        <p data-i18n="Mobile app news and reviews.">Mobile app news and reviews.</p>
-                                    </div>
-                                    <div class="mega-card">
-                                        <img class="category-image" src="assets/images/20260101075831_medium_358x215_16.webp" alt="News Image">
-                                        <h3 data-i18n="Software">Software</h3>
-                                        <p data-i18n="Programming and software updates.">Programming and software updates.</p>
-                                    </div>
+                                <div class="mega-menu" id="mega-menu-tech">
+                                    <!-- Loaded dynamically from API -->
                                 </div>
                             </li>
                         </ul>
@@ -192,14 +101,8 @@
                     <i class="ri-fire-fill"></i> <span data-i18n="Breaking News" data-auto-translate="true">Breaking News</span>
                 </div>
                 <div class="breaking-ticker-wrapper">
-                    <div class="breaking-ticker">
-                        <span data-auto-translate="true">Global climate summit reaches historic agreement on carbon emissions reduction</span>
-                        <span>•</span>
-                        <span data-auto-translate="true">Tech giant announces revolutionary AI-powered healthcare solution</span>
-                        <span>•</span>
-                        <span data-auto-translate="true">International space station celebrates 25 years in orbit</span>
-                        <span>•</span>
-                        <span data-auto-translate="true">Major economic reform package unveiled by leading nations</span>
+                    <div class="breaking-ticker" id="breaking-ticker">
+                        <!-- Loaded dynamically from API -->
                     </div>
                 </div>
                 <div class="date-widget">
@@ -246,10 +149,10 @@
             </div>
         </div>
 
-        <!-- Article Content Section -->
-<section class="article-content-section">
+<!-- Article Content Section -->
+        <section class="article-content-section">
             <div class="container">
-                <!-- Breadcrumb -->
+<!-- Breadcrumb -->
                 <div class="breadcrumb">
                     <a href="index.html">Home</a>
                     <span class="breadcrumb-separator"><i class="ri-arrow-right-s-line"></i></span>
@@ -260,11 +163,144 @@
 
                 <!-- Article Not Found -->
                 <div id="article-not-found" class="article-not-found" style="display: none;">
-                    <div class="not-found-content">
-                        <i class="ri-article-line"></i>
-                        <h2>Article Not Found</h2>
-                        <p>The article you're looking for doesn't exist or has been removed.</p>
-                        <a href="index.html" class="back-home-btn">Back to Home</a>
+                    <div class="not-found-layout">
+                        <div class="not-found-main">
+                            <div class="not-found-content">
+                                <i class="ri-article-line"></i>
+                                <h2>Article Not Found</h2>
+                                <p>The article you're looking for doesn't exist or has been removed.</p>
+                                <a href="index.html" class="back-home-btn">Back to Home</a>
+                            </div>
+                        </div>
+                        <aside class="not-found-sidebar">
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title"><span class="title-icon"><i class="ri-links-line"></i></span>Related Articles</h3>
+                                <div class="related-articles-list" id="related-articles-not-found"></div>
+                            </div>
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title"><span class="title-icon"><i class="ri-fire-line"></i></span>Trending Now</h3>
+                                <div class="trending-list" id="trending-articles-not-found"></div>
+                            </div>
+                            <div class="sidebar-widget newsletter-widget">
+                                <div class="newsletter-box">
+                                    <h4>Subscribe to Newsletter</h4>
+                                    <p>Get the latest news delivered to your inbox</p>
+                                    <form class="newsletter-form">
+                                        <input type="email" placeholder="Enter your email">
+                                        <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+<!-- Category Sections - Shown when navigating from index.html topic links -->
+                <div id="category-sections" class="category-sections" style="display: none;">
+                    <div class="category-sections-layout">
+                        <div class="category-sections-main">
+                    
+                    <!-- Politics Section -->
+                    <section id="politics-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-government-line"></i> Politics</h2>
+                        </div>
+                        <div class="category-articles" id="politics-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Business Section -->
+                    <section id="business-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-briefcase-line"></i> Business</h2>
+                        </div>
+                        <div class="category-articles" id="business-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Sports Section -->
+                    <section id="sports-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-trophy-line"></i> Sports</h2>
+                        </div>
+                        <div class="category-articles" id="sports-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Science Section -->
+                    <section id="science-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-flask-line"></i> Science</h2>
+                        </div>
+                        <div class="category-articles" id="science-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Tech Section -->
+                    <section id="tech-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-macbook-line"></i> Tech</h2>
+                        </div>
+                        <div class="category-articles" id="tech-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Entertainment Section -->
+                    <section id="entertainment-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-movie-line"></i> Entertainment</h2>
+                        </div>
+                        <div class="category-articles" id="entertainment-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Health Section -->
+                    <section id="health-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-heart-line"></i> Health</h2>
+                        </div>
+                        <div class="category-articles" id="health-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                    <!-- Finance Section -->
+                    <section id="finance-section" class="category-section" style="display: none;">
+                        <div class="category-header">
+                            <h2><i class="ri-line-chart-line"></i> Finance</h2>
+                        </div>
+                        <div class="category-articles" id="finance-articles">
+                            <!-- Articles will be loaded dynamically -->
+                        </div>
+                    </section>
+
+                        </div>
+                        <aside class="category-sections-sidebar">
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title"><span class="title-icon"><i class="ri-links-line"></i></span>Related Articles</h3>
+                                <div class="related-articles-list" id="related-articles-category"></div>
+                            </div>
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title"><span class="title-icon"><i class="ri-fire-line"></i></span>Trending Now</h3>
+                                <div class="trending-list" id="trending-articles-category"></div>
+                            </div>
+                            <div class="sidebar-widget newsletter-widget">
+                                <div class="newsletter-box">
+                                    <h4>Subscribe to Newsletter</h4>
+                                    <p>Get the latest news delivered to your inbox</p>
+                                    <form class="newsletter-form">
+                                        <input type="email" placeholder="Enter your email">
+                                        <button type="submit"><i class="ri-send-plane-fill"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
 
@@ -420,48 +456,221 @@
     <script src="script.js?v=3"></script>
     <script src="admin-articles.js"></script>
     
-    <script>
-        let currentArticle = null;
+<script>
+let currentArticle = null;
         
-        // Demo article for preview purposes
-        const demoArticle = {
-            id: 'demo_001',
-            title: 'Global Climate Summit Reaches Historic Agreement on Carbon Emissions',
-            category: 'Politics - Environment',
-            date: 'January 15, 2025',
-            summary: 'World leaders have come together in a groundbreaking agreement to reduce carbon emissions by 50% by 2030, marking a significant milestone in the fight against climate change.',
-            content: '<p>In a historic moment for climate action, representatives from over 190 countries have signed a landmark agreement to dramatically reduce carbon emissions over the next decade. The agreement, reached after two weeks of intense negotiations at the Global Climate Summit, sets ambitious but necessary targets for nations worldwide.</p><p>The deal includes binding commitments to transition to renewable energy sources, phase out coal-powered plants, and implement carbon pricing mechanisms. Financial support for developing nations to assist in their transition to green energy is also a key component of the agreement.</p><p>"This is a turning point in human history," said the UN Secretary-General at the closing ceremony. "For the first time, we have a truly global commitment to tackle the greatest challenge of our time."</p><p>Environmental activists have cautiously welcomed the agreement, while emphasizing the need for urgent implementation. Critics argue that more aggressive measures are needed to meet the Paris Agreement goals.</p>',
-            image: 'assets/images/20260101075831_big_730x400_30.webp'
+        // Category mapping for navigation from index.html
+        const categoryMap = {
+            'politics': 'Politics',
+            'business': 'Business', 
+            'sports': 'Sports',
+            'science': 'Science',
+            'tech': 'Tech'
         };
         
-        function loadArticleById() {
+        // All available categories
+        const allCategories = ['politics', 'business', 'sports', 'science', 'tech', 'entertainment', 'health', 'finance'];
+        const categoryNames = {
+            politics: 'Politics',
+            business: 'Business',
+            sports: 'Sports',
+            science: 'Science',
+            tech: 'Tech',
+            entertainment: 'Entertainment',
+            health: 'Health',
+            finance: 'Finance'
+        };
+        
+        // Check if URL has view=all parameter (from Load More button)
+        function checkViewAllParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const viewAll = urlParams.get('view');
+            
+            if (viewAll === 'all') {
+                // User clicked Load More button - show all categories
+                showAllCategories();
+                return true;
+            }
+            return false;
+        }
+        
+// Show all categories section
+        function showAllCategories() {
+            // Hide article display and not found, show category sections container
+            document.getElementById('article-not-found').style.display = 'none';
+            document.getElementById('article-display').style.display = 'none';
+            document.getElementById('category-sections').style.display = 'block';
+            
+            // Update breadcrumb
+            document.getElementById('breadcrumb-category').textContent = 'All Categories';
+            document.getElementById('breadcrumb-title').textContent = 'Latest News';
+            document.title = 'All Categories - PTS NEWS';
+            
+            // Hide all individual category sections first
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show all category sections and load their articles
+            allCategories.forEach(category => {
+                const section = document.getElementById(category + '-section');
+                if (section) {
+                    section.style.display = 'block';
+                    // Load articles for each category
+                    loadCategoryArticlesFromAPI(category);
+                }
+            });
+            
+            // Load sidebar content
+            loadCategorySidebarContent();
+        }
+        
+        // Load articles for a specific category from API
+        function loadCategoryArticlesFromAPI(category) {
+            const container = document.getElementById(category + '-articles');
+            if (!container) return;
+            
+            // Use the category name as is for the API call
+            fetch('api/articles.php?category=' + category)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.data && data.data.length > 0) {
+                        displayCategoryArticlesFromAPI(container, data.data);
+                    } else {
+                        // No articles from API - show empty state message
+                        container.innerHTML = '<p class="no-articles">No articles available in this category.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.log('Error loading category articles:', error);
+                    // Show error message
+                    container.innerHTML = '<p class="no-articles">Error loading articles. Please try again later.</p>';
+                });
+        }
+        
+        // Check if URL has category parameter and load category section
+        function checkCategoryParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            
+            if (category && categoryMap[category]) {
+                // User navigated from index.html topic link
+                showCategorySection(category);
+                return true;
+            }
+            return false;
+        }
+        
+// Show category section and hide article display
+        function showCategorySection(category) {
+            const categoryName = categoryMap[category];
+            const categorySection = document.getElementById(category + '-section');
+            
+            if (categorySection) {
+                // Hide article display, show category sections container
+                document.getElementById('article-display').style.display = 'none';
+                document.getElementById('category-sections').style.display = 'block';
+                
+                // Hide all category sections first
+                document.querySelectorAll('.category-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show only the selected category section
+                categorySection.style.display = 'block';
+                
+                // Update breadcrumb
+                document.getElementById('breadcrumb-category').textContent = categoryName;
+                document.getElementById('breadcrumb-title').textContent = categoryName;
+                document.title = categoryName + ' - PTS NEWS';
+                
+                // Load articles for this category
+                loadCategoryArticles(category, categoryName);
+                
+                // Load sidebar content
+                loadCategorySidebarContent();
+            }
+        }
+        
+// Load articles for a specific category
+        function loadCategoryArticles(category, categoryName) {
+            const container = document.getElementById(category + '-articles');
+            
+            // Fetch from API
+            fetch('api/articles.php?category=' + categoryName)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.data && data.data.length > 0) {
+                        displayCategoryArticles(container, data.data);
+                    } else {
+                        container.innerHTML = '<p class="no-articles">No articles available in this category.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.log('Error loading category articles:', error);
+                    container.innerHTML = '<p class="no-articles">Error loading articles. Please try again later.</p>';
+                });
+        }
+        
+// Display articles in category section
+        function displayCategoryArticles(container, articles) {
+            if (!articles || articles.length === 0) {
+                container.innerHTML = '<p class="no-articles">No articles available in this category.</p>';
+                return;
+            }
+            
+            container.innerHTML = articles.map(article => `
+                <article class="category-article-item">
+                    <div class="category-article-thumb">
+                        ${article.image ? `<img src="${article.image}" alt="${article.title}">` : '<div class="no-image"><i class="ri-image-line"></i></div>'}
+                    </div>
+                    <div class="category-article-info">
+                        <h3><a href="article.html?id=${article.id}">${article.title}</a></h3>
+                        <p>${article.summary || ''}</p>
+                        <span class="category-article-date">${article.date || ''}</span>
+                    </div>
+                </article>
+            `).join('');
+        }
+        
+function loadArticleById() {
+            // First check if this is a "view all" navigation from index.html Load More button
+            if (checkViewAllParam()) {
+                return; // All categories section is being displayed
+            }
+            
+            // Check if this is a category navigation from index.html
+            if (checkCategoryParam()) {
+                return; // Category section is being displayed
+            }
+            
             const urlParams = new URLSearchParams(window.location.search);
             const articleId = urlParams.get('id');
+            const categoryParam = urlParams.get('category');
             
-            // For demo purposes, show demo article if no ID provided and no articles in localStorage
+            // Check if category parameter exists - show category section
+            const validCategories = ['politics', 'business', 'sports', 'science', 'tech', 'entertainment', 'health', 'finance'];
+            if (categoryParam && validCategories.includes(categoryParam)) {
+                displayCategorySection(categoryParam);
+                return;
+            }
+            
+            // If no article ID, show all categories
+            if (!articleId) {
+                // No article ID - show all categories
+                checkViewAllParam();
+                return;
+            }
+            
+            // Load articles from localStorage
             const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             
-            if (!articleId && articles.length === 0) {
-                // Show demo article to preview UI
-                displayArticle(demoArticle);
-                loadRelatedArticles(demoArticle.category);
-                loadTrendingArticles();
-                return;
-            }
+            // Try to find the article by ID (as string or number)
+            let article = articles.find(a => a.id == articleId || a.id === articleId);
             
-            if (!articleId) {
-                showArticleNotFound();
-                loadRelatedArticles();
-                loadTrendingArticles();
-                return;
-            }
-            
-            const article = articles.find(a => a.id === articleId);
-            
+            // If not found in localStorage, try fetching from API
             if (!article) {
-                showArticleNotFound();
-                loadRelatedArticles();
-                loadTrendingArticles();
+                fetchArticleFromAPI(articleId);
                 return;
             }
             
@@ -471,16 +680,163 @@
             loadTrendingArticles();
         }
         
+        // Fetch article from API
+        function fetchArticleFromAPI(articleId) {
+            fetch('api/articles.php?id=' + articleId)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.data) {
+                        currentArticle = data.data;
+                        displayArticle(data.data);
+                        loadRelatedArticles(data.data.category);
+                        loadTrendingArticles();
+                    } else {
+                        // Article not found - show not found page
+                        showArticleNotFound();
+                    }
+                })
+                .catch(error => {
+                    console.log('Error fetching article from API:', error);
+                    // Show article not found
+                    showArticleNotFound();
+                });
+        }
+        
+        function loadArticleWithCategory(articleId, category) {
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            const article = articles.find(a => a.id === articleId);
+            
+            if (article) {
+                currentArticle = article;
+                displayArticle(article);
+                loadRelatedArticles(article.category);
+                loadTrendingArticles();
+} else {
+                // Article not found in localStorage
+                showArticleNotFound();
+                loadRelatedArticles();
+                loadTrendingArticles();
+            }
+        }
+        
+function displayCategorySection(category) {
+            // Hide article display and not found, show category sections
+            document.getElementById('article-not-found').style.display = 'none';
+            document.getElementById('article-display').style.display = 'none';
+            document.getElementById('category-sections').style.display = 'block';
+            
+            // Update breadcrumb
+            const categoryNames = {
+                politics: 'Politics',
+                business: 'Business',
+                sports: 'Sports',
+                science: 'Science',
+                tech: 'Tech',
+                entertainment: 'Entertainment',
+                health: 'Health',
+                finance: 'Finance'
+            };
+            document.getElementById('breadcrumb-category').textContent = categoryNames[category] || 'Category';
+            document.getElementById('breadcrumb-title').textContent = categoryNames[category] || 'Articles';
+            
+            // Hide all category sections first
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show the requested category section
+            const sectionId = category + '-section';
+            const sectionElement = document.getElementById(sectionId);
+            if (sectionElement) {
+                sectionElement.style.display = 'block';
+                
+                // Load articles for this category
+                loadCategoryArticles(category);
+                
+                // Scroll to the section
+                setTimeout(() => {
+                    sectionElement.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+            
+            // Update page title
+            document.title = categoryNames[category] + ' - PTS NEWS';
+            
+            // Load sidebar content
+            loadCategorySidebarContent();
+        }
+        
+function loadCategoryArticles(category) {
+            const container = document.getElementById(category + '-articles');
+            if (!container) return;
+            
+            // Fetch from API
+            fetch('api/articles.php?category=' + category)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.data && data.data.length > 0) {
+                        displayCategoryArticlesFromAPI(container, data.data);
+                    } else {
+                        container.innerHTML = '<p class="no-articles">No articles available in this category.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.log('Error loading category articles:', error);
+                    container.innerHTML = '<p class="no-articles">Error loading articles. Please try again later.</p>';
+                });
+        }
+        
+        // Display articles from API in category section
+        function displayCategoryArticlesFromAPI(container, articles) {
+            if (!articles || articles.length === 0) {
+                container.innerHTML = '<p class="no-articles">No articles available in this category.</p>';
+                return;
+            }
+            
+            container.innerHTML = articles.map(article => `
+                <article class="category-article-item">
+                    <div class="category-article-thumb">
+                        ${article.image ? 
+                            `<img src="${article.image}" alt="${article.title}">` : 
+                            `<div class="no-image"><i class="ri-image-line"></i></div>`}
+                    </div>
+                    <div class="category-article-content">
+                        <h3><a href="article.html?id=${article.id}">${article.title}</a></h3>
+                        <p>${article.summary || ''}</p>
+                        <span class="category-article-date"><i class="ri-calendar-line"></i> ${article.date || ''}</span>
+                    </div>
+                </article>
+            `).join('');
+        }
+        
         function displayArticle(article) {
             document.getElementById('article-not-found').style.display = 'none';
             document.getElementById('article-display').style.display = 'block';
             
-            document.getElementById('article-title').textContent = article.title || 'Untitled';
-            document.getElementById('breadcrumb-title').textContent = article.title || 'Article';
+            // Get current language
+            const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+            
+            // Get translated content based on language
+            let articleTitle = article.title || 'Untitled';
+            let articleSummary = article.summary || '';
+            let articleContent = article.content || '';
+            
+            if (currentLang === 'tam' && article.title_tamil) {
+                articleTitle = article.title_tamil;
+                articleSummary = article.summary_tamil || '';
+                articleContent = article.content_tamil || article.content || '';
+            } else if (currentLang === 'hin' && article.title_hindi) {
+                articleTitle = article.title_hindi;
+                articleSummary = article.summary_hindi || '';
+                articleContent = article.content_hindi || article.content || '';
+            }
+            
+            document.getElementById('article-title').textContent = articleTitle;
+            document.getElementById('breadcrumb-title').textContent = articleTitle;
             document.getElementById('article-category').textContent = getMainCategory(article.category);
             document.getElementById('breadcrumb-category').textContent = getMainCategory(article.category);
             document.getElementById('article-date').textContent = article.date || '';
-            document.getElementById('article-summary').textContent = article.summary || '';
+            document.getElementById('article-summary').textContent = articleSummary;
             
             const views = Math.floor(Math.random() * 4900) + 100;
             document.getElementById('article-views').textContent = views.toLocaleString() + ' views';
@@ -488,26 +844,91 @@
             const imageEl = document.getElementById('article-image');
             if (article.image && isValidImage(article.image)) {
                 imageEl.src = article.image;
-                imageEl.alt = article.title;
+                imageEl.alt = articleTitle;
             } else {
                 imageEl.parentElement.style.display = 'none';
             }
             
             const contentEl = document.getElementById('article-content');
-            if (article.content) {
-                contentEl.innerHTML = article.content;
-            } else if (article.summary) {
-                contentEl.innerHTML = '<p>' + article.summary + '</p>';
+            if (articleContent) {
+                contentEl.innerHTML = articleContent;
+            } else if (articleSummary) {
+                contentEl.innerHTML = '<p>' + articleSummary + '</p>';
             } else {
                 contentEl.innerHTML = '<p>No content available.</p>';
             }
             
-            document.title = (article.title || 'Article') + ' - PTS NEWS';
+            document.title = articleTitle + ' - PTS NEWS';
         }
         
-        function showArticleNotFound() {
-            document.getElementById('article-not-found').style.display = 'flex';
+function showArticleNotFound() {
+            document.getElementById('article-not-found').style.display = 'block';
             document.getElementById('article-display').style.display = 'none';
+            // Load sidebar content for not found page
+            loadRelatedArticlesSidebar('not-found');
+            loadTrendingArticlesSidebar('not-found');
+        }
+        
+        // Load related articles for sidebar (not-found or category)
+        function loadRelatedArticlesSidebar(section) {
+            const containerId = section === 'not-found' ? 'related-articles-not-found' : 'related-articles-category';
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            let related = articles.slice(0, 5);
+            
+            if (related.length === 0) {
+                container.innerHTML = '<p class="no-articles">No related articles</p>';
+                return;
+            }
+            
+            container.innerHTML = related.map(article => `
+                <div class="related-article-item">
+                    <div class="related-article-thumb">
+                        ${article.image && isValidImage(article.image) ? 
+                            `<img src="${article.image}" alt="${article.title}">` : 
+                            `<div class="no-image"><i class="ri-image-line"></i></div>`}
+                    </div>
+                    <div class="related-article-info">
+                        <h4><a href="article.html?id=${article.id}">${article.title}</a></h4>
+                        <span class="related-date">${article.date || ''}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Load trending articles for sidebar (not-found or category)
+        function loadTrendingArticlesSidebar(section) {
+            const containerId = section === 'not-found' ? 'trending-articles-not-found' : 'trending-articles-category';
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
+            const trending = articles.length > 0 ? [...articles].sort(() => Math.random() - 0.5).slice(0, 5) : [];
+            
+            if (trending.length === 0) {
+                container.innerHTML = '<p class="no-articles">No trending articles</p>';
+                return;
+            }
+            
+            container.innerHTML = trending.map((article, index) => `
+                <div class="trending-item">
+                    <span class="trending-number">${index + 1}</span>
+                    <div class="trending-info">
+                        <h4><a href="article.html?id=${article.id}">${article.title}</a></h4>
+                        <span class="trending-meta">
+                            <span class="trending-cat">${article.category || getMainCategory(article.category)}</span>
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Load sidebar content when category sections are shown
+        function loadCategorySidebarContent() {
+            loadRelatedArticlesSidebar('category');
+            loadTrendingArticlesSidebar('category');
         }
         
         function getMainCategory(fullCategory) {
@@ -525,44 +946,15 @@
             return true;
         }
         
-        function loadRelatedArticles(category) {
+function loadRelatedArticles(category) {
             const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             const container = document.getElementById('related-articles');
             
-            // Demo related articles for preview
-            const demoRelatedArticles = [
-                {
-                    id: 'demo_related_1',
-                    title: 'Renewable Energy Investments Reach Record High in 2025',
-                    date: 'January 14, 2025',
-                    image: 'assets/images/20260102081509_medium_358x215_28.webp'
-                },
-                {
-                    id: 'demo_related_2',
-                    title: 'Electric Vehicle Sales Surge as Governments Offer Incentives',
-                    date: 'January 13, 2025',
-                    image: 'assets/images/20260102082019_medium_358x215_42.webp'
-                },
-                {
-                    id: 'demo_related_3',
-                    title: 'New Study Reveals Impact of Ocean Warming on Marine Life',
-                    date: 'January 12, 2025',
-                    image: 'assets/images/20260103082039_medium_358x215_42.webp'
-                },
-                {
-                    id: 'demo_related_4',
-                    title: 'Tech Companies Commit to Carbon Neutrality by 2030',
-                    date: 'January 11, 2025',
-                    image: 'assets/images/20260101080454_small_123x83_24.webp'
-                }
-            ];
-            
+            // Filter articles excluding current article
             let related = articles.filter(a => a.id !== currentArticle?.id);
             
-            if (related.length === 0 && !category) {
-                // Use demo related articles for preview
-                related = demoRelatedArticles;
-            } else if (category) {
+            // Sort by category match if category is provided
+            if (category) {
                 const mainCat = getMainCategory(category);
                 related = related.sort((a, b) => {
                     const aCat = getMainCategory(a.category);
@@ -597,41 +989,8 @@
             const articles = JSON.parse(localStorage.getItem('adminArticles') || '[]');
             const container = document.getElementById('trending-articles');
             
-            // Demo trending articles for preview
-            const demoTrendingArticles = [
-                {
-                    id: 'demo_trending_1',
-                    title: 'Stock Market Hits All-Time High Amid Economic Optimism',
-                    category: 'Business',
-                    date: 'January 15, 2025'
-                },
-                {
-                    id: 'demo_trending_2',
-                    title: 'Cricket World Cup: India Announces Squad for Upcoming Tournament',
-                    category: 'Sports',
-                    date: 'January 14, 2025'
-                },
-                {
-                    id: 'demo_trending_3',
-                    title: 'NASA Announces New Mars Mission Timeline',
-                    category: 'Science',
-                    date: 'January 13, 2025'
-                },
-                {
-                    id: 'demo_trending_4',
-                    title: 'Apple Unveils Revolutionary AI Features in Latest iPhone',
-                    category: 'Tech',
-                    date: 'January 12, 2025'
-                },
-                {
-                    id: 'demo_trending_5',
-                    title: 'Major Political Reform Bill Passes Senate Vote',
-                    category: 'Politics',
-                    date: 'January 11, 2025'
-                }
-            ];
-            
-            const trending = articles.length > 0 ? [...articles].sort(() => Math.random() - 0.5).slice(0, 5) : demoTrendingArticles;
+            // Get trending articles (random selection)
+            const trending = articles.length > 0 ? [...articles].sort(() => Math.random() - 0.5).slice(0, 5) : [];
             
             if (trending.length === 0) {
                 container.innerHTML = '<p class="no-articles">No trending articles</p>';
@@ -682,6 +1041,16 @@
         
         document.addEventListener('DOMContentLoaded', function() {
             loadArticleById();
+            
+            // Listen for language changes and reload article
+            const originalChangeLanguage = window.changeLanguage;
+            window.changeLanguage = async function(lang) {
+                await originalChangeLanguage(lang);
+                // Reload article with new language if article is loaded
+                if (currentArticle) {
+                    displayArticle(currentArticle);
+                }
+            };
         });
     </script>
 </body>
